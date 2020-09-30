@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0702243F25247A7400856B87 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0702243E25247A7400856B87 /* SearchViewController.swift */; };
+		0702244125247AC500856B87 /* AnalysisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0702244025247AC500856B87 /* AnalysisViewController.swift */; };
 		071EC79925145D1500D9AB1A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EC79825145D1500D9AB1A /* Diary.swift */; };
 		071EC79B25145F6E00D9AB1A /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */; };
 		0745BE102522FD8B00C42B60 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 0745BE0F2522FD8B00C42B60 /* setting.png */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0702243E25247A7400856B87 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		0702244025247AC500856B87 /* AnalysisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisViewController.swift; sourceTree = "<group>"; };
 		071EC79825145D1500D9AB1A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
 		0745BE0F2522FD8B00C42B60 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				0769E994251087FB00CD6C47 /* DiaryViewController.swift */,
 				071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */,
 				07E1A9FA25187645002D9A40 /* ShareViewController.swift */,
+				0702243E25247A7400856B87 /* SearchViewController.swift */,
+				0702244025247AC500856B87 /* AnalysisViewController.swift */,
 				0745BE112523014600C42B60 /* SettingViewController.swift */,
 				0769E982250F478400CD6C47 /* Main.storyboard */,
 				0769E985250F478600CD6C47 /* Assets.xcassets */,
@@ -240,8 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0702243F25247A7400856B87 /* SearchViewController.swift in Sources */,
 				076DA3AD251339ED000F4867 /* CalendarViewController.swift in Sources */,
 				0769E995251087FB00CD6C47 /* DiaryViewController.swift in Sources */,
+				0702244125247AC500856B87 /* AnalysisViewController.swift in Sources */,
 				0769E981250F478400CD6C47 /* ViewController.swift in Sources */,
 				0769E97D250F478400CD6C47 /* AppDelegate.swift in Sources */,
 				0769E97F250F478400CD6C47 /* SceneDelegate.swift in Sources */,

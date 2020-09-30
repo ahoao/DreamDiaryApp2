@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="784" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Analysis View Controller-->
         <scene sceneID="Pde-RQ-hrz">
             <objects>
-                <viewController id="cVJ-Zr-G8a" sceneMemberID="viewController">
+                <viewController id="cVJ-Zr-G8a" customClass="AnalysisViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A4k-CO-aWU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="4" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="gbm-N5-8m4">
             <objects>
-                <viewController id="Jze-c1-Ziv" sceneMemberID="viewController">
+                <viewController id="Jze-c1-Ziv" customClass="SearchViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uyV-dC-0on">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
