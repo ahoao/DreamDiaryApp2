@@ -27,7 +27,7 @@
                                 </constraints>
                                 <state key="normal" title="どんな夢だった？"/>
                                 <connections>
-                                    <segue destination="JUr-RH-F7F" kind="show" id="Zys-vK-aIc"/>
+                                    <segue destination="JUr-RH-F7F" kind="showDetail" id="rwr-5m-edG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -206,11 +206,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="NWM-me-IFh" kind="relationship" relationship="viewControllers" id="O3j-WE-Juy"/>
-                        <segue destination="cVJ-Zr-G8a" kind="relationship" relationship="viewControllers" id="MEg-Kw-9Rh"/>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="byS-Nj-6qT"/>
-                        <segue destination="Jze-c1-Ziv" kind="relationship" relationship="viewControllers" id="RIC-rI-nLD"/>
-                        <segue destination="3zS-lK-7ys" kind="relationship" relationship="viewControllers" id="gPU-g7-cME"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ygM-cP-Tuq"/>
+                        <segue destination="NWM-me-IFh" kind="relationship" relationship="viewControllers" id="zcw-oo-0yh"/>
+                        <segue destination="cVJ-Zr-G8a" kind="relationship" relationship="viewControllers" id="jbl-Xb-9qV"/>
+                        <segue destination="Jze-c1-Ziv" kind="relationship" relationship="viewControllers" id="TCJ-PZ-6Yt"/>
+                        <segue destination="3zS-lK-7ys" kind="relationship" relationship="viewControllers" id="RUR-iz-mtY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hh0-DV-1T7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,9 +253,10 @@
                                     <action selector="didTouchDownButton" destination="JUr-RH-F7F" eventType="touchDown" id="80g-jB-llF"/>
                                     <action selector="didTouchDragExitButton" destination="JUr-RH-F7F" eventType="touchDragExit" id="mZh-gn-MUL"/>
                                     <action selector="didTouchUpInsideButton" destination="JUr-RH-F7F" eventType="touchUpInside" id="Weh-tf-wHe"/>
+                                    <action selector="feelingTag1:" destination="JUr-RH-F7F" eventType="touchUpInside" id="qH6-9X-4Z7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-pF-6ZG">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NTN-pF-6ZG">
                                 <rect key="frame" x="90" y="121" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -269,7 +270,7 @@
                                     <action selector="didTouchUpInsideButton2" destination="JUr-RH-F7F" eventType="touchUpInside" id="txu-dj-U9t"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juu-Tp-3KA">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juu-Tp-3KA">
                                 <rect key="frame" x="150" y="121" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -283,7 +284,7 @@
                                     <action selector="didTouchUpInsideButton3" destination="JUr-RH-F7F" eventType="touchUpInside" id="7FB-LT-MZZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-Wf-DWP">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-Wf-DWP">
                                 <rect key="frame" x="210" y="121" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -297,7 +298,7 @@
                                     <action selector="didTouchUpInsideButton4" destination="JUr-RH-F7F" eventType="touchUpInside" id="4Tx-5N-6Zm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abv-7b-M83">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abv-7b-M83">
                                 <rect key="frame" x="270" y="121" width="40" height="40"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -311,7 +312,7 @@
                                     <action selector="didTouchUpInsideButton5" destination="JUr-RH-F7F" eventType="touchUpInside" id="rMR-D4-fmn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-AH-GIi">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-AH-GIi">
                                 <rect key="frame" x="330" y="121" width="40" height="40"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -433,7 +434,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuq-4H-thH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wZi-J2-A1c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="783" y="820"/>
+            <point key="canvasLocation" x="783" y="984"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="rIy-6H-IfJ">
@@ -470,7 +471,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-aW-CI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="1531"/>
+            <point key="canvasLocation" x="783" y="1777"/>
         </scene>
     </scenes>
     <resources>

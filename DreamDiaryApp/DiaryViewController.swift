@@ -7,6 +7,8 @@ import RealmSwift
 
 class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate {
     
+    var feelingButtonTag = Int()
+    
     let MARGIN: CGFloat = 10
     
     let tagListView = TagListView()
@@ -16,9 +18,13 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var tagTextField: UITextField!
     @IBOutlet weak var displayTagView: TagListView!
     
-    
 
     @IBOutlet weak var feelingButton1: UIButton!
+    
+    @IBAction func feelingTag1(_ sender: UIButton) {
+        feelingButtonTag = sender.tag
+        
+    }
     /// ボタンを押したタイミングで呼ばれます。
     @IBAction func didTouchDownButton() {
         // ボタンを縮こませます
@@ -225,7 +231,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
 
          try! realm.write {
              //日付表示の内容とスケジュール入力の内容が書き込まれる。
-             let Events = [Diary(value: ["content": diaryTextView.text, "tag": tagTextField.text])]
+            let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag])]
              realm.add(Events)
              print("データ書き込み中")
          }
@@ -254,6 +260,9 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         self.setView()
         
         tagTextField.delegate = self
+        
+//        let feelingButtontag = feelingButton1.tag
+        
         
     }
     func setView() {
