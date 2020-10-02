@@ -19,11 +19,203 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
 
     @IBOutlet weak var feelingButton1: UIButton!
+    /// ボタンを押したタイミングで呼ばれます。
+    @IBAction func didTouchDownButton() {
+        // ボタンを縮こませます
+        UIView.animate(withDuration: 0.2, animations: { 
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+
+    /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
+    /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
+    @IBAction func didTouchDragExitButton() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+        UIView.animate(withDuration: 0.2, animations: { 
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+
+    /// ボタンが指から離れたタイミングで呼ばれます。
+    @IBAction func didTouchUpInsideButton() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    
     @IBOutlet weak var feelingButton2: UIButton!
+    
+    /// ボタンを押したタイミングで呼ばれます。
+    @IBAction func didTouchDownButton2() {
+        // ボタンを縮こませます
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton2.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+
+    /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
+    /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
+    @IBAction func didTouchDragExitButton2() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+
+    /// ボタンが指から離れたタイミングで呼ばれます。
+    @IBAction func didTouchUpInsideButton2() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+
+            self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
     @IBOutlet weak var feelingButton3: UIButton!
+    
+    /// ボタンを押したタイミングで呼ばれます。
+    @IBAction func didTouchDownButton3() {
+        // ボタンを縮こませます
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton3.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+
+    /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
+    /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
+    @IBAction func didTouchDragExitButton3() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+
+    /// ボタンが指から離れたタイミングで呼ばれます。
+    @IBAction func didTouchUpInsideButton3() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+
+            self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
     @IBOutlet weak var feelingButton4: UIButton!
+    
+    /// ボタンを押したタイミングで呼ばれます。
+    @IBAction func didTouchDownButton4() {
+        // ボタンを縮こませます
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton4.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+
+    /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
+    /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
+    @IBAction func didTouchDragExitButton4() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton4.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+
+    /// ボタンが指から離れたタイミングで呼ばれます。
+    @IBAction func didTouchUpInsideButton4() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+
+            self.feelingButton4.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
     @IBOutlet weak var feelingButton5: UIButton!
+    
+    /// ボタンを押したタイミングで呼ばれます。
+    @IBAction func didTouchDownButton5() {
+        // ボタンを縮こませます
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton5.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+
+    /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
+    /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
+    @IBAction func didTouchDragExitButton5() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+
+    /// ボタンが指から離れたタイミングで呼ばれます。
+    @IBAction func didTouchUpInsideButton5() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+
+            self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
     @IBOutlet weak var feelingButton6: UIButton!
+    
+    /// ボタンを押したタイミングで呼ばれます。
+    @IBAction func didTouchDownButton6() {
+        // ボタンを縮こませます
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton6.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+
+    /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
+    /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
+    @IBAction func didTouchDragExitButton6() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton6.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
+    }
+
+    /// ボタンが指から離れたタイミングで呼ばれます。
+    @IBAction func didTouchUpInsideButton6() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+
+            self.feelingButton6.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
     
     
       var diary: Diary! // 受け皿の用意
