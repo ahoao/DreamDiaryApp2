@@ -230,9 +230,23 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func diarySave(_ sender: Any) {
      let realm = try! Realm()
 
+        let selectedDate = datePicker.date
+        print("datePickerの中身\(selectedDate)")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/dd/MM"
+        let stringDate = dateFormatter.string(from: selectedDate)
+        print("datePickerの中身\(selectedDate)")
+        
          try! realm.write {
              //日付表示の内容とスケジュール入力の内容が書き込まれる。
-            let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag, "date": datePicker as Any])]
+            let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag, "date": stringDate])]
+            
+            
+            
+            
+            print("データ書き込み完了")
+            
              realm.add(Events)
              print("データ書き込み中")
          }
