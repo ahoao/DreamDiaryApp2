@@ -19,7 +19,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     let Date = UILabel(frame: CGRect(x: 5, y: 430, width: 200, height: 100))
     
     //    気持ちボタンの表示
-    let feelingButton = UIImageView(frame: CGRect(x: 5, y: 400, width: 200, height: 100))
+    let feelingButton = UIImageView(frame: CGRect(x: 20, y:500, width: 100, height: 100))
     
     
     @IBOutlet weak var calendar: FSCalendar!
@@ -57,22 +57,22 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         //        feelingbutton表示設定
         let selectedImage = UIImage(named: "icon")
         feelingButton.image = selectedImage
-        var displayImageNo = 0
-        var imageNameArray = ["icon","icon2","icon3","icon4","icon5","icon6",]
+        view.addSubview(feelingButton)
+    }
+    
+    var displayImageNo = 0
+    var imageNameArray = ["icon","icon2","icon3","icon4","icon5","icon6",]
+    
+    func displayImage(displayImageNo: Int) {
         
-        func displayImage(displayImageNo: Int) {
-            
-            // 表示している画像の番号から名前を取り出し
-            let name = imageNameArray[displayImageNo]
-            
-            // 画像を読み込み
-            let selectedImage = UIImage(named: name)
-            
-            // Image Viewに読み込んだ画像をセット
-            feelingButton.image = selectedImage
-        }
+        // 表示している画像の番号から名前を取り出し
+        let name = imageNameArray[displayImageNo]
         
+        // 画像を読み込み
+        let selectedImage = UIImage(named: name)
         
+        // Image Viewに読み込んだ画像をセット
+        feelingButton.image = selectedImage
     }
     
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
@@ -154,6 +154,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         //        view.addSubview(Date)
         
         labelTag.text = ""
+        feelingButton.image = nil
         
         //スケジュール取得
         let realm = try! Realm()
@@ -163,15 +164,15 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         result = result.filter("date = '\(da)'")
         print("result =", result)
         for resultData in result {
-                 if resultData.date == da {
-                     Date.text = resultData.date
-                     labelData.text = resultData.content
-                     labelTag.text = resultData.tag
-                     displayImage(displayImageNo: resultData.feelingTag)
-                     print("labelData.text =", labelData.text)
-                     view.addSubview(labelData)
-                 }
-             }
+            if resultData.date == da {
+                Date.text = resultData.date
+                labelData.text = resultData.content
+                labelTag.text = resultData.tag
+                displayImage(displayImageNo: resultData.feelingTag)
+                print("labelData.text =", labelData.text)
+                view.addSubview(labelData)
+            }
+        }
     }
     
     
