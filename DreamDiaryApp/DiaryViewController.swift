@@ -250,6 +250,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         try! realm.write {
             //日付表示の内容とスケジュール入力の内容が書き込まれる。
             let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag, "date": stringDate])]
+
             print("データ書き込み完了")
             
             realm.add(Events)

@@ -15,13 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFE-MX-riY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back2.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFE-MX-riY">
                                 <rect key="frame" x="-22" y="0.0" width="459" height="953"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vb-1Z-TrQ">
                                 <rect key="frame" x="100" y="494" width="214" height="60"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="DG3-ue-SWB"/>
                                 </constraints>
@@ -41,6 +41,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="bed.double.fill" catalog="system" springLoaded="YES" id="teB-N0-udW"/>
+                    <connections>
+                        <outlet property="touchDiaryButton" destination="6vb-1Z-TrQ" id="miL-vD-Qbt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -277,7 +280,7 @@
                                     <constraint firstAttribute="width" constant="40" id="R8a-uj-3qJ"/>
                                     <constraint firstAttribute="height" constant="40" id="u3f-EG-D3S"/>
                                 </constraints>
-                                <state key="normal" title="嬉"/>
+                                <state key="normal" title="嬉" image="icon.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton" destination="JUr-RH-F7F" eventType="touchDown" id="80g-jB-llF"/>
                                     <action selector="didTouchDragExitButton" destination="JUr-RH-F7F" eventType="touchDragExit" id="mZh-gn-MUL"/>
@@ -293,11 +296,12 @@
                                     <constraint firstAttribute="height" constant="40" id="3tV-4A-59U"/>
                                     <constraint firstAttribute="width" constant="40" id="bRB-ef-mdS"/>
                                 </constraints>
-                                <state key="normal" title="笑"/>
+                                <state key="normal" title="笑" image="icon2.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton2" destination="JUr-RH-F7F" eventType="touchDown" id="GNG-kI-YGq"/>
                                     <action selector="didTouchDragExitButton2" destination="JUr-RH-F7F" eventType="touchDragExit" id="e1u-2z-BVr"/>
                                     <action selector="didTouchUpInsideButton2" destination="JUr-RH-F7F" eventType="touchUpInside" id="txu-dj-U9t"/>
+                                    <action selector="feelingTag1:" destination="JUr-RH-F7F" eventType="touchUpInside" id="Ktt-Ma-wlX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juu-Tp-3KA">
@@ -307,11 +311,12 @@
                                     <constraint firstAttribute="width" constant="40" id="J2P-qx-pst"/>
                                     <constraint firstAttribute="height" constant="40" id="ThL-jD-Naw"/>
                                 </constraints>
-                                <state key="normal" title="怖"/>
+                                <state key="normal" title="怖" image="icon3.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton3" destination="JUr-RH-F7F" eventType="touchDown" id="X8v-mR-nWv"/>
                                     <action selector="didTouchDragExitButton3" destination="JUr-RH-F7F" eventType="touchDragExit" id="CkT-CV-t5I"/>
                                     <action selector="didTouchUpInsideButton3" destination="JUr-RH-F7F" eventType="touchUpInside" id="7FB-LT-MZZ"/>
+                                    <action selector="feelingTag1:" destination="JUr-RH-F7F" eventType="touchUpInside" id="qem-7c-0OC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-Wf-DWP">
@@ -321,11 +326,12 @@
                                     <constraint firstAttribute="width" constant="40" id="NUl-9Y-uTZ"/>
                                     <constraint firstAttribute="height" constant="40" id="bCZ-uN-3ol"/>
                                 </constraints>
-                                <state key="normal" title="悲"/>
+                                <state key="normal" title="悲" image="icon4.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton4" destination="JUr-RH-F7F" eventType="touchDown" id="1c3-ug-AdH"/>
                                     <action selector="didTouchDragExitButton4" destination="JUr-RH-F7F" eventType="touchDragExit" id="vSW-9Z-sEV"/>
                                     <action selector="didTouchUpInsideButton4" destination="JUr-RH-F7F" eventType="touchUpInside" id="4Tx-5N-6Zm"/>
+                                    <action selector="feelingTag1:" destination="JUr-RH-F7F" eventType="touchUpInside" id="pOY-4F-MkC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abv-7b-M83">
@@ -335,11 +341,12 @@
                                     <constraint firstAttribute="width" constant="40" id="a4c-dB-qhm"/>
                                     <constraint firstAttribute="height" constant="40" id="g7p-jA-cHE"/>
                                 </constraints>
-                                <state key="normal" title="怒"/>
+                                <state key="normal" title="怒" image="icon5.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton5" destination="JUr-RH-F7F" eventType="touchDown" id="xDB-MU-42X"/>
                                     <action selector="didTouchDragExitButton5" destination="JUr-RH-F7F" eventType="touchDragExit" id="qB7-bS-GFc"/>
                                     <action selector="didTouchUpInsideButton5" destination="JUr-RH-F7F" eventType="touchUpInside" id="rMR-D4-fmn"/>
+                                    <action selector="feelingTag1:" destination="JUr-RH-F7F" eventType="touchUpInside" id="Ynz-5F-jxa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-AH-GIi">
@@ -349,11 +356,12 @@
                                     <constraint firstAttribute="height" constant="40" id="GzZ-bQ-0ei"/>
                                     <constraint firstAttribute="width" constant="40" id="NhB-fG-uX4"/>
                                 </constraints>
-                                <state key="normal" title="無"/>
+                                <state key="normal" title="無" image="icon6.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton6" destination="JUr-RH-F7F" eventType="touchDown" id="8xG-RA-7z8"/>
                                     <action selector="didTouchDragExitButton6" destination="JUr-RH-F7F" eventType="touchDragExit" id="Zva-h3-Fyn"/>
                                     <action selector="didTouchUpInsideButton6" destination="JUr-RH-F7F" eventType="touchUpInside" id="mN3-Df-FhF"/>
+                                    <action selector="feelingTag1:" destination="JUr-RH-F7F" eventType="touchUpInside" id="kUE-MY-DOH"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="夢の内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-6d-0YX">
@@ -529,11 +537,18 @@
     </scenes>
     <resources>
         <image name="back1.png" width="215" height="294"/>
+        <image name="back2.png" width="175" height="381"/>
         <image name="background.png" width="192" height="289.44000244140625"/>
         <image name="bed.double.fill" catalog="system" width="128" height="80"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="effect2.png" width="65" height="146"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="icon.png" width="43" height="42"/>
+        <image name="icon2.png" width="88" height="83"/>
+        <image name="icon3.png" width="81" height="74"/>
+        <image name="icon4.png" width="78" height="81"/>
+        <image name="icon5.png" width="93" height="81"/>
+        <image name="icon6.png" width="85" height="82"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="moon.zzz" catalog="system" width="118" height="128"/>
         <image name="saveimage.png" width="241" height="182"/>

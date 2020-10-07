@@ -19,7 +19,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     let Date = UILabel(frame: CGRect(x: 5, y: 430, width: 200, height: 100))
     
     //    気持ちボタンの表示
-    let feelingButton = UILabel(frame: CGRect(x: 5, y: 400, width: 200, height: 100))
+    let feelingButton = UIImageView(frame: CGRect(x: 5, y: 400, width: 200, height: 100))
     
     
     @IBOutlet weak var calendar: FSCalendar!
@@ -53,8 +53,25 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         labelData.textColor = .white
         view.addSubview(labelData)
         
-        //        気持ちボタン表示設定(上を参考にすると、textになっちゃう。イメージを表示させたい)
-        feelingButton
+        
+        //        feelingbutton表示設定
+        let selectedImage = UIImage(named: "icon")
+        feelingButton.image = selectedImage
+        var displayImageNo = 0
+        var imageNameArray = ["icon","icon2","icon3","icon4","icon5","icon6",]
+        
+        func displayImage(displayImageNo: Int) {
+            
+            // 表示している画像の番号から名前を取り出し
+            let name = imageNameArray[displayImageNo]
+            
+            // 画像を読み込み
+            let selectedImage = UIImage(named: name)
+            
+            // Image Viewに読み込んだ画像をセット
+            feelingButton.image = selectedImage
+        }
+        
         
     }
     
@@ -146,15 +163,16 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         result = result.filter("date = '\(da)'")
         print("result =", result)
         for resultData in result {
-            if resultData.date == da {
-                Date.text = resultData.date
-                labelData.text = resultData.content
-                labelTag.text = resultData.tag
-                
-                print("labelData.text =", labelData.text)
-                view.addSubview(labelData)
-            }
-        }
+                 if resultData.date == da {
+                     Date.text = resultData.date
+                     labelData.text = resultData.content
+                     labelTag.text = resultData.tag
+                     displayImage(displayImageNo: resultData.feelingTag)
+                     print("labelData.text =", labelData.text)
+                     view.addSubview(labelData)
+                 }
+             }
     }
+    
     
 }
