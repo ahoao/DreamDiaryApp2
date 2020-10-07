@@ -13,6 +13,8 @@
 		070224462525AFBB00856B87 /* effect3.png in Resources */ = {isa = PBXBuildFile; fileRef = 070224442525AFBB00856B87 /* effect3.png */; };
 		070224472525AFBB00856B87 /* effect2.png in Resources */ = {isa = PBXBuildFile; fileRef = 070224452525AFBB00856B87 /* effect2.png */; };
 		070224492525B07D00856B87 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 070224482525B07D00856B87 /* back.png */; };
+		0702244B252D918D00856B87 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0702244A252D918D00856B87 /* icon.png */; };
+		0702244D252D952700856B87 /* back1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0702244C252D952700856B87 /* back1.png */; };
 		071EC79925145D1500D9AB1A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EC79825145D1500D9AB1A /* Diary.swift */; };
 		071EC79B25145F6E00D9AB1A /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */; };
 		0745BE102522FD8B00C42B60 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 0745BE0F2522FD8B00C42B60 /* setting.png */; };
@@ -39,6 +41,8 @@
 		070224442525AFBB00856B87 /* effect3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effect3.png; sourceTree = "<group>"; };
 		070224452525AFBB00856B87 /* effect2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = effect2.png; sourceTree = "<group>"; };
 		070224482525B07D00856B87 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		0702244A252D918D00856B87 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		0702244C252D952700856B87 /* back1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back1.png; sourceTree = "<group>"; };
 		071EC79825145D1500D9AB1A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
 		0745BE0F2522FD8B00C42B60 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -110,7 +114,9 @@
 				0769E985250F478600CD6C47 /* Assets.xcassets */,
 				070224482525B07D00856B87 /* back.png */,
 				07E1A9F8251875AB002D9A40 /* saveimage.png */,
+				0702244C252D952700856B87 /* back1.png */,
 				070224422525AF1800856B87 /* effect.png */,
+				0702244A252D918D00856B87 /* icon.png */,
 				070224452525AFBB00856B87 /* effect2.png */,
 				070224442525AFBB00856B87 /* effect3.png */,
 				0745BE0F2522FD8B00C42B60 /* setting.png */,
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E1A9F9251875AB002D9A40 /* saveimage.png in Resources */,
+				0702244D252D952700856B87 /* back1.png in Resources */,
 				0769E993251058D400CD6C47 /* background.png in Resources */,
 				070224432525AF1800856B87 /* effect.png in Resources */,
 				0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */,
@@ -207,6 +214,7 @@
 				0769E9972510AD6200CD6C47 /* GoogleService-Info.plist in Resources */,
 				0769E986250F478600CD6C47 /* Assets.xcassets in Resources */,
 				070224492525B07D00856B87 /* back.png in Resources */,
+				0702244B252D918D00856B87 /* icon.png in Resources */,
 				070224472525AFBB00856B87 /* effect2.png in Resources */,
 				0769E984250F478400CD6C47 /* Main.storyboard in Resources */,
 				070224462525AFBB00856B87 /* effect3.png in Resources */,

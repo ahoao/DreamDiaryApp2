@@ -9,22 +9,18 @@ let h = UIScreen.main.bounds.size.height
 
 class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance {
     
-    
-    //画面遷移(スケジュール登録ページ)
-    @objc func onClick(_: UIButton) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let SecondController = storyboard.instantiateViewController(withIdentifier: "Insert")
-        present(SecondController, animated: true, completion: nil)
-    }
-    
     //スケジュール内容
-    let labelDate = UILabel(frame: CGRect(x: 5, y: 580, width: 400, height: 50))
-    //「主なスケジュール」の表示
-    let labelTitle = UILabel(frame: CGRect(x: 0, y: 530, width: 180, height: 50))
+    let labelData = UILabel(frame: CGRect(x: 5, y: 580, width: 400, height: 50))
+    //「タグ」の表示
+    let labelTag = UILabel(frame: CGRect(x: 0, y: 530, width: 180, height: 50))
     //カレンダー部分
     let dateView = FSCalendar(frame: CGRect(x: 0, y: 30, width: w, height: 400))
     //日付の表示
     let Date = UILabel(frame: CGRect(x: 5, y: 430, width: 200, height: 100))
+    
+    //    気持ちボタンの表示
+    let feelingButton = UILabel(frame: CGRect(x: 5, y: 400, width: 200, height: 100))
+    
     
     @IBOutlet weak var calendar: FSCalendar!
     
@@ -40,29 +36,25 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         //日付表示設定
         Date.text = ""
-        Date.font = UIFont.systemFont(ofSize: 60.0)
+        Date.font = UIFont.systemFont(ofSize: 20.0)
         Date.textColor = .white
         view.addSubview(Date)
         
-        //「主なスケジュール」表示設定
-        labelTitle.text = ""
-        labelTitle.textAlignment = .center
-        labelTitle.font = UIFont.systemFont(ofSize: 20.0)
-        view.addSubview(labelTitle)
+        //「タグ」表示設定
+        labelTag.text = ""
+        labelTag.textAlignment = .center
+        labelTag.textColor = .white
+        labelTag.font = UIFont.systemFont(ofSize: 20.0)
+        view.addSubview(labelTag)
         
         //スケジュール内容表示設定
-        labelDate.text = ""
-        labelDate.font = UIFont.systemFont(ofSize: 18.0)
-        view.addSubview(labelDate)
+        labelData.text = ""
+        labelData.font = UIFont.systemFont(ofSize: 18.0)
+        labelData.textColor = .white
+        view.addSubview(labelData)
         
-        //スケジュール追加ボタン
-        let addBtn = UIButton(frame: CGRect(x: w - 100, y: h - 100, width: 60, height: 60))
-        addBtn.setTitle("+", for: UIControl.State())
-        addBtn.setTitleColor(.white, for: UIControl.State())
-        addBtn.backgroundColor = .orange
-        addBtn.layer.cornerRadius = 30.0
-        addBtn.addTarget(self, action: #selector(onClick(_:)), for: .touchUpInside)
-        view.addSubview(addBtn)
+        //        気持ちボタン表示設定(上を参考にすると、textになっちゃう。イメージを表示させたい)
+        feelingButton
         
     }
     
@@ -122,47 +114,47 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         return nil
     }
     
-//カレンダー処理(スケジュール表示処理)
-func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
-    
-    labelTitle.text = "選んだ気持ち"
-    labelTitle.backgroundColor = .orange
-    view.addSubview(labelTitle)
-    
-    //予定がある場合、スケジュールをDBから取得・表示する。
-    //無い場合、「スケジュールはありません」と表示。
-    labelDate.text = "スケジュールはありません"
-    labelDate.textColor = .lightGray
-    view.addSubview(labelDate)
-    
-    let tmpDate = Calendar(identifier: .gregorian)
-    let year = tmpDate.component(.year, from: date)
-    let month = tmpDate.component(.month, from: date)
-    let day = tmpDate.component(.day, from: date)
-    let m = String(format: "%02d", month)
-    let d = String(format: "%02d", day)
-    
-    let da = "\(year)/\(m)/\(d)"
-    
-    //クリックしたら、日付が表示される。
-    Date.text = "\(m)/\(d)"
-    view.addSubview(Date)
-    
-    //スケジュール取得
-    let realm = try! Realm()
-    var result = realm.objects(Event.self)
-    result = result.filter("date = '\(da)'")
-    print(result)
-    for ev in result {
-        if ev.date == da {
-            labelDate.text = ev.event
-            labelDate.textColor = .black
-            view.addSubview(labelDate)
+    //カレンダー処理(スケジュール表示処理)
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
+        
+        //予定がある場合、スケジュールをDBから取得・表示する。
+        //無い場合、「スケジュールはありません」と表示。
+        labelData.text = "スケジュールはありません"
+        labelData.textColor = .lightGray
+        //        view.addSubview(labelData)
+        
+        let tmpDate = Calendar(identifier: .gregorian)
+        let year = tmpDate.component(.year, from: date)
+        let month = tmpDate.component(.month, from: date)
+        let day = tmpDate.component(.day, from: date)
+        let m = String(format: "%02d", month)
+        let d = String(format: "%02d", day)
+        
+        let da = "\(year)/\(m)/\(d)"
+        
+        //クリックしたら、日付が表示される。
+        Date.text = "\(year)/\(m)/\(d)"
+        //        view.addSubview(Date)
+        
+        labelTag.text = ""
+        
+        //スケジュール取得
+        let realm = try! Realm()
+        var result = realm.objects(Diary.self)
+        print("result =", result)
+        print("da =", da)
+        result = result.filter("date = '\(da)'")
+        print("result =", result)
+        for resultData in result {
+            if resultData.date == da {
+                Date.text = resultData.date
+                labelData.text = resultData.content
+                labelTag.text = resultData.tag
+                
+                print("labelData.text =", labelData.text)
+                view.addSubview(labelData)
+            }
         }
     }
     
-    
-    
 }
-}
-

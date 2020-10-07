@@ -19,7 +19,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var displayTagView: TagListView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-
+    
     @IBOutlet weak var feelingButton1: UIButton!
     
     @IBAction func feelingTag1(_ sender: UIButton) {
@@ -33,7 +33,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton1.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         })
     }
-
+    
     /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
     /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
     @IBAction func didTouchDragExitButton() {
@@ -42,7 +42,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton() {
         // バウンド処理です
@@ -52,9 +52,18 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        initialSpringVelocity: 8,
                        options: .curveEaseOut,
                        animations: { () -> Void in
-
-            self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+                        self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
+    }
+    
+    @IBAction func imageButtonChange(_ sender: Any) {
+        
+        let image = UIImage(named: "icon")
+        let state = UIControl.State.normal
+        
+        feelingButton1.setImage(image, for: state)
+        
     }
     
     
@@ -67,7 +76,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton2.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         })
     }
-
+    
     /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
     /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
     @IBAction func didTouchDragExitButton2() {
@@ -76,7 +85,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton2() {
         // バウンド処理です
@@ -86,8 +95,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        initialSpringVelocity: 8,
                        options: .curveEaseOut,
                        animations: { () -> Void in
-
-            self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+                        self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     
@@ -100,7 +109,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton3.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         })
     }
-
+    
     /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
     /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
     @IBAction func didTouchDragExitButton3() {
@@ -109,7 +118,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton3() {
         // バウンド処理です
@@ -119,8 +128,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        initialSpringVelocity: 8,
                        options: .curveEaseOut,
                        animations: { () -> Void in
-
-            self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+                        self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     
@@ -133,7 +142,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton4.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         })
     }
-
+    
     /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
     /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
     @IBAction func didTouchDragExitButton4() {
@@ -142,7 +151,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton4.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton4() {
         // バウンド処理です
@@ -152,8 +161,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        initialSpringVelocity: 8,
                        options: .curveEaseOut,
                        animations: { () -> Void in
-
-            self.feelingButton4.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+                        self.feelingButton4.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     
@@ -166,7 +175,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton5.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         })
     }
-
+    
     /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
     /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
     @IBAction func didTouchDragExitButton5() {
@@ -175,7 +184,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton5() {
         // バウンド処理です
@@ -185,8 +194,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        initialSpringVelocity: 8,
                        options: .curveEaseOut,
                        animations: { () -> Void in
-
-            self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+                        self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     
@@ -199,7 +208,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton6.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
         })
     }
-
+    
     /// ボタンを押下途中で指から離れたタイミングで呼ばれます。
     /// NOTE: ボタンに指が触れたままボタン外の領域まで指を移動したままにするとボタンが縮こまったままになってしまうのを防ぐ処理です。
     @IBAction func didTouchDragExitButton6() {
@@ -208,7 +217,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             self.feelingButton6.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         })
     }
-
+    
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton6() {
         // バウンド処理です
@@ -218,47 +227,48 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        initialSpringVelocity: 8,
                        options: .curveEaseOut,
                        animations: { () -> Void in
-
-            self.feelingButton6.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        
+                        self.feelingButton6.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
     }
     
     
     
-      var diary: Diary! // 受け皿の用意
+    var diary: Diary! // 受け皿の用意
     
     @IBAction func diarySave(_ sender: Any) {
-     let realm = try! Realm()
-
+        let realm = try! Realm()
+        
         let selectedDate = datePicker.date
         print("datePickerの中身\(selectedDate)")
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy/dd/MM"
+        dateFormatter.dateFormat = "yyyy/MM/dd"
         let stringDate = dateFormatter.string(from: selectedDate)
         print("datePickerの中身\(selectedDate)")
         
-         try! realm.write {
-             //日付表示の内容とスケジュール入力の内容が書き込まれる。
+        try! realm.write {
+            //日付表示の内容とスケジュール入力の内容が書き込まれる。
             let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag, "date": stringDate])]
-            
-            
-            
-            
             print("データ書き込み完了")
             
-             realm.add(Events)
-             print("データ書き込み中")
-         }
-
-     print("データ書き込み完了")
-
-     //前のページに戻る
-     dismiss(animated: true, completion: nil)
-        
-        
+            realm.add(Events)
+            print("データ書き込み中")
         }
-
+        
+        print("データ書き込み完了")
+        
+        //前のページに戻る
+        //     dismiss(animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    @IBAction func touchSaveButton(_ sender: UIButton) {let vc = ShareViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // DB内のタスクが格納されるリスト。
     // 以降内容をアップデートするとリスト内は自動的に更新される。
     var taskArray = try! Realm().objects(Diary.self)
@@ -270,7 +280,27 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         
         tagTextField.delegate = self
         
-//        let feelingButtontag = feelingButton1.tag
+        //        let feelingButtontag = feelingButton1.tag
+        
+        // 枠のカラー
+        diaryTextView.layer.borderColor = UIColor.white.cgColor
+        
+        // 枠の幅
+        diaryTextView.layer.borderWidth = 2.0
+        
+        // 枠を角丸にする
+        diaryTextView.layer.cornerRadius = 20.0
+        diaryTextView.layer.masksToBounds = true
+        
+        // 枠のカラー
+        tagTextField.layer.borderColor = UIColor.white.cgColor
+        
+        // 枠の幅
+        tagTextField.layer.borderWidth = 2.0
+        
+        // 枠を角丸にする
+        tagTextField.layer.cornerRadius = 20.0
+        tagTextField.layer.masksToBounds = true
         
         
     }
