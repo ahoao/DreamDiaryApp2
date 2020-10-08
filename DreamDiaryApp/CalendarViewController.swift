@@ -3,11 +3,22 @@ import FSCalendar
 import CalculateCalendarLogic
 import RealmSwift
 
+
+
+
+
 //ディスプレイサイズ取得
 let w = UIScreen.main.bounds.size.width
 let h = UIScreen.main.bounds.size.height
 
 class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance {
+    
+    @IBOutlet weak var dateDisplayLabel: UILabel!
+    
+    @IBOutlet weak var tagDisplayLabel: UILabel!
+    @IBOutlet weak var diaryDisplayLabel: UILabel!
+    @IBOutlet weak var feelingDisplayImage: UIImageView!
+    
     
     //スケジュール内容
     let labelData = UILabel(frame: CGRect(x: 5, y: 580, width: 400, height: 50))
@@ -24,8 +35,65 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     
     @IBOutlet weak var calendar: FSCalendar!
     
+    var imageArray:Array<UIImageView> = Array()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = .white
+        
+        let viewWidth:CGFloat = self.view.frame.width
+        let viewHeight:CGFloat = self.view.frame.height
+        
+        //インスタンスの生成
+        for i in 0..<9 {
+            let imgView:UIImageView = UIImageView()
+            imgView.image = UIImage(named: "back1")
+            imgView.contentMode = .scaleAspectFit
+            imgView.frame.size = CGSize(width: 2000, height: 2000)
+            imageArray.append(imgView)
+            self.view.addSubview(imageArray[i])
+        }
+        
+        //アニメーション
+        //１列目
+        imageArray[0].center = CGPoint(x: -viewWidth / 2, y: viewHeight * 0.6)
+        imageArray[1].center = CGPoint(x: 0, y: viewHeight * 0.3)
+        imageArray[2].center =  CGPoint(x: viewWidth / 2, y: 0)
+        
+        //2列目
+        imageArray[3].center = CGPoint(x: -viewWidth / 2, y: viewHeight * 1.2)
+        imageArray[4].center = CGPoint(x: 0, y: viewHeight * 0.9)
+        imageArray[5].center = CGPoint(x: viewWidth / 2, y: viewHeight * 0.6)
+        imageArray[6].center = CGPoint(x: viewWidth, y: viewHeight * 0.3)
+        
+        //３列目
+        imageArray[7].center = CGPoint(x: viewWidth / 2, y: viewHeight * 1.2)
+        imageArray[8].center = CGPoint(x: viewWidth, y: viewHeight * 0.9)
+        
+        //アニメーションの設定
+        //4秒間かけて、一定の速さで繰り返しのアニメーションを行う
+        UIView.animate(withDuration: 4, delay: 0.0, options: [.repeat, .curveLinear], animations: {
+            //１列目
+            self.imageArray[0].center = CGPoint(x: 0, y: viewHeight * 0.3)
+            self.imageArray[1].center = CGPoint(x: viewWidth / 2, y: 0)
+            self.imageArray[2].center = CGPoint(x: viewWidth, y: -viewHeight * 0.3)
+            
+            //2列目
+            self.imageArray[3].center = CGPoint(x: 0, y: viewHeight * 0.9)
+            self.imageArray[4].center = CGPoint(x: viewWidth / 2, y: viewHeight * 0.6)
+            self.imageArray[5].center = CGPoint(x: viewWidth, y: viewHeight * 0.3)
+            self.imageArray[6].center = CGPoint(x: viewWidth * 1.5, y: 0)
+            
+            //３列目
+            self.imageArray[7].center = CGPoint(x: viewWidth, y: viewHeight * 0.9)
+            self.imageArray[8].center = CGPoint(x: viewWidth * 1.5, y: viewHeight * 0.6)
+        },completion:nil)
+        
+      
+
+
+        
         //カレンダー設定
         self.dateView.dataSource = self
         self.dateView.delegate = self
@@ -173,7 +241,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
                 view.addSubview(labelData)
             }
         }
+             
+            
+          }
     }
     
     
-}
+

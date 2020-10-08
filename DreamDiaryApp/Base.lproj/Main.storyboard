@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back2.png" translatesAutoresizingMaskIntoConstraints="NO" id="DFE-MX-riY">
-                                <rect key="frame" x="-22" y="0.0" width="459" height="953"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2SO-fG-VM6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vb-1Z-TrQ">
@@ -56,12 +56,6 @@
                     <view key="view" contentMode="scaleToFill" id="A4k-CO-aWU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="effect2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zln-oP-P4H">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xpI-TE-AbN"/>
                     </view>
@@ -79,7 +73,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Y2-h7J">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Y2-h7J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -101,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-NO-NOR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-NO-NOR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -152,10 +146,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="effect2.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXo-Wu-EIB">
-                                <rect key="frame" x="0.0" y="44" width="414" height="857"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1.png" id="y1p-Ke-4ft">
+                                <rect key="frame" x="0.0" y="-7" width="414" height="910"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-BT-YGR" customClass="FSCalendar">
+                            <view contentMode="scaleToFill" restorationIdentifier="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-BT-YGR" customClass="FSCalendar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="409"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -189,17 +184,38 @@
                                     <outlet property="delegate" destination="NWM-me-IFh" id="LBz-dc-EMN"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeR-BB-g6a">
+                                <rect key="frame" x="20" y="461" width="123" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lG-5i-WOa">
+                                <rect key="frame" x="20" y="521" width="123" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-CA-hb0">
+                                <rect key="frame" x="20" y="581" width="374" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-vA-9zg">
+                                <rect key="frame" x="274" y="461" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Qzv-BT-YGR" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" id="9wK-ea-ejc"/>
                             <constraint firstItem="Qzv-BT-YGR" firstAttribute="trailing" secondItem="2fA-If-5gy" secondAttribute="trailing" id="CAw-Nj-bbd"/>
                             <constraint firstItem="Qzv-BT-YGR" firstAttribute="top" secondItem="2fA-If-5gy" secondAttribute="top" id="E2i-7E-Gw4"/>
-                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="trailing" secondItem="hXo-Wu-EIB" secondAttribute="trailing" id="Wfe-na-yKw"/>
-                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="leading" secondItem="hXo-Wu-EIB" secondAttribute="leading" id="ctv-6k-eQ0"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="hXo-Wu-EIB" secondAttribute="bottom" constant="-88" id="dB5-hM-OA5"/>
                             <constraint firstItem="2fA-If-5gy" firstAttribute="bottom" secondItem="Qzv-BT-YGR" secondAttribute="bottom" constant="360" id="nOY-Zr-kOr"/>
-                            <constraint firstItem="hXo-Wu-EIB" firstAttribute="top" secondItem="Qzv-BT-YGR" secondAttribute="top" id="tGU-Zs-Dnp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2fA-If-5gy"/>
                     </view>
@@ -207,6 +223,10 @@
                     <navigationItem key="navigationItem" id="2fc-pr-Bob"/>
                     <connections>
                         <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
+                        <outlet property="dateDisplayLabel" destination="yeR-BB-g6a" id="NBY-zV-WxD"/>
+                        <outlet property="diaryDisplayLabel" destination="MDa-CA-hb0" id="Yie-gu-kGe"/>
+                        <outlet property="feelingDisplayImage" destination="BmK-vA-9zg" id="mPF-JT-alt"/>
+                        <outlet property="tagDisplayLabel" destination="6lG-5i-WOa" id="R3q-JV-fS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dd-Br-6eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -501,12 +521,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Lh-w8T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Lh-w8T">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saveimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-ME-hHZ">
-                                <rect key="frame" x="0.0" y="242" width="414" height="313"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-em-n6r">
@@ -524,6 +540,13 @@
                                     <segue destination="YLD-se-QiW" kind="unwind" unwindAction="unwind:" id="v5s-sd-Qcb"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="保存できました" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pg-9d-Kk0">
+                                <rect key="frame" x="91" y="306" width="237" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Jp7-9l-EEt"/>
@@ -532,16 +555,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-aW-CI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="YLD-se-QiW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="783" y="1777"/>
+            <point key="canvasLocation" x="782.60869565217399" y="1776.5625"/>
         </scene>
     </scenes>
     <resources>
         <image name="back1.png" width="215" height="294"/>
         <image name="back2.png" width="175" height="381"/>
-        <image name="background.png" width="192" height="289.44000244140625"/>
         <image name="bed.double.fill" catalog="system" width="128" height="80"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="effect2.png" width="65" height="146"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <image name="icon.png" width="43" height="42"/>
         <image name="icon2.png" width="88" height="83"/>
@@ -551,6 +572,5 @@
         <image name="icon6.png" width="85" height="82"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="moon.zzz" catalog="system" width="118" height="128"/>
-        <image name="saveimage.png" width="241" height="182"/>
     </resources>
 </document>
