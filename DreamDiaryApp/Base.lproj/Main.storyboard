@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back2.png" translatesAutoresizingMaskIntoConstraints="NO" id="2SO-fG-VM6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2SO-fG-VM6">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -42,6 +42,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" image="bed.double.fill" catalog="system" springLoaded="YES" id="teB-N0-udW"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="2SO-fG-VM6" id="FwV-fX-6Wh"/>
                         <outlet property="touchDiaryButton" destination="6vb-1Z-TrQ" id="miL-vD-Qbt"/>
                     </connections>
                 </viewController>
@@ -56,14 +57,23 @@
                     <view key="view" contentMode="scaleToFill" id="A4k-CO-aWU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-HZ-0Iq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xpI-TE-AbN"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="moon.zzz" catalog="system" id="ZyQ-V6-ro3"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="0DR-HZ-0Iq" id="5kF-TV-7AN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUO-DP-U9Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4" y="121"/>
+            <point key="canvasLocation" x="2.8985507246376816" y="120.53571428571428"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="gbm-N5-8m4">
@@ -82,6 +92,9 @@
                         <viewLayoutGuide key="safeArea" id="W0g-8f-0qt"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="VRI-49-wjf"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="NJh-Y2-h7J" id="h4f-LN-TGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0u-T4-mCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,6 +146,10 @@
                         <viewLayoutGuide key="safeArea" id="aKE-yI-Acy"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="ellipsis.circle.fill" catalog="system" id="3IV-hC-0z1"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="XOT-NO-NOR" id="6eZ-2y-Laq"/>
+                        <outlet property="settingTableView" destination="EhT-ph-lTA" id="EP2-bt-iIR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fco-0w-ooW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,6 +239,7 @@
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="2af-Jv-2Pb"/>
                     <navigationItem key="navigationItem" id="2fc-pr-Bob"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="y1p-Ke-4ft" id="q2N-zY-wKV"/>
                         <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
                         <outlet property="dateDisplayLabel" destination="yeR-BB-g6a" id="NBY-zV-WxD"/>
                         <outlet property="diaryDisplayLabel" destination="MDa-CA-hb0" id="Yie-gu-kGe"/>
@@ -496,6 +514,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KSN-HK-b7f"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="w8A-aK-h04" id="NoF-HH-PQj"/>
                         <outlet property="datePicker" destination="NPt-Qk-4lE" id="eEQ-9y-ThH"/>
                         <outlet property="diaryTextView" destination="PGR-6d-0YX" id="98X-jL-6Ll"/>
                         <outlet property="displayTagView" destination="Ey9-Af-CDU" id="ThG-yi-guv"/>
@@ -551,6 +570,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Jp7-9l-EEt"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="wFI-Lh-w8T" id="bYh-pw-Dfx"/>
+                        <outlet property="cancelButton" destination="AKw-tA-MCB" id="hsb-va-frd"/>
+                        <outlet property="saveButton" destination="MbI-em-n6r" id="mdn-qh-Ero"/>
+                        <outlet property="saveViewLavel" destination="0Pg-9d-Kk0" id="Rgl-mF-2lV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-aW-CI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="YLD-se-QiW" userLabel="Exit" sceneMemberID="exit"/>
@@ -560,7 +585,6 @@
     </scenes>
     <resources>
         <image name="back1.png" width="215" height="294"/>
-        <image name="back2.png" width="175" height="381"/>
         <image name="bed.double.fill" catalog="system" width="128" height="80"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
