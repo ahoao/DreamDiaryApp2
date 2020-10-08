@@ -19,20 +19,9 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     @IBOutlet weak var diaryDisplayLabel: UILabel!
     @IBOutlet weak var feelingDisplayImage: UIImageView!
     
-    
-    //スケジュール内容
-    let labelData = UILabel(frame: CGRect(x: 5, y: 580, width: 400, height: 50))
-    //「タグ」の表示
-    let labelTag = UILabel(frame: CGRect(x: 0, y: 530, width: 180, height: 50))
     //カレンダー部分
     let dateView = FSCalendar(frame: CGRect(x: 0, y: 30, width: w, height: 400))
-    //日付の表示
-    let Date = UILabel(frame: CGRect(x: 5, y: 430, width: 200, height: 100))
-    
-    //    気持ちボタンの表示
-    let feelingButton = UIImageView(frame: CGRect(x: 20, y:500, width: 100, height: 100))
-    
-    
+
     @IBOutlet weak var calendar: FSCalendar!
     
     var imageArray:Array<UIImageView> = Array()
@@ -103,29 +92,29 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         dateView.backgroundColor = .white
         
         //日付表示設定
-        Date.text = ""
-        Date.font = UIFont.systemFont(ofSize: 20.0)
-        Date.textColor = .white
-        view.addSubview(Date)
+        dateDisplayLabel.text = ""
+        dateDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
+        dateDisplayLabel.textColor = .white
+        view.addSubview(dateDisplayLabel)
         
         //「タグ」表示設定
-        labelTag.text = ""
-        labelTag.textAlignment = .center
-        labelTag.textColor = .white
-        labelTag.font = UIFont.systemFont(ofSize: 20.0)
-        view.addSubview(labelTag)
+        tagDisplayLabel.text = ""
+        tagDisplayLabel.textAlignment = .center
+        tagDisplayLabel.textColor = .white
+        tagDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
+        view.addSubview(tagDisplayLabel)
         
         //スケジュール内容表示設定
-        labelData.text = ""
-        labelData.font = UIFont.systemFont(ofSize: 18.0)
-        labelData.textColor = .white
-        view.addSubview(labelData)
+       diaryDisplayLabel.text = ""
+        diaryDisplayLabel.font = UIFont.systemFont(ofSize: 18.0)
+        diaryDisplayLabel.textColor = .white
+        view.addSubview(diaryDisplayLabel)
         
         
         //        feelingbutton表示設定
         let selectedImage = UIImage(named: "icon")
-        feelingButton.image = selectedImage
-        view.addSubview(feelingButton)
+        feelingDisplayImage.image = selectedImage
+        view.addSubview(feelingDisplayImage)
     }
     
     var displayImageNo = 0
@@ -140,7 +129,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         let selectedImage = UIImage(named: name)
         
         // Image Viewに読み込んだ画像をセット
-        feelingButton.image = selectedImage
+        feelingDisplayImage.image = selectedImage
     }
     
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
@@ -204,8 +193,8 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         //予定がある場合、スケジュールをDBから取得・表示する。
         //無い場合、「スケジュールはありません」と表示。
-        labelData.text = "スケジュールはありません"
-        labelData.textColor = .lightGray
+        diaryDisplayLabel.text = "スケジュールはありません"
+        diaryDisplayLabel.textColor = .lightGray
         //        view.addSubview(labelData)
         
         let tmpDate = Calendar(identifier: .gregorian)
@@ -218,11 +207,11 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         let da = "\(year)/\(m)/\(d)"
         
         //クリックしたら、日付が表示される。
-        Date.text = "\(year)/\(m)/\(d)"
+        dateDisplayLabel.text = "\(year)/\(m)/\(d)"
         //        view.addSubview(Date)
         
-        labelTag.text = ""
-        feelingButton.image = nil
+        tagDisplayLabel.text = ""
+        feelingDisplayImage.image = nil
         
         //スケジュール取得
         let realm = try! Realm()
@@ -233,12 +222,12 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         print("result =", result)
         for resultData in result {
             if resultData.date == da {
-                Date.text = resultData.date
-                labelData.text = resultData.content
-                labelTag.text = resultData.tag
+                dateDisplayLabel.text = resultData.date
+                diaryDisplayLabel.text = resultData.content
+                tagDisplayLabel.text = resultData.tag
                 displayImage(displayImageNo: resultData.feelingTag)
-                print("labelData.text =", labelData.text)
-                view.addSubview(labelData)
+                print("diaryDisplayLabel.text =", diaryDisplayLabel.text)
+                view.addSubview(diaryDisplayLabel)
             }
         }
              
