@@ -22,6 +22,9 @@
 		0702245E252DA96300856B87 /* icon6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0702245B252DA96200856B87 /* icon6.png */; };
 		0702245F252DA96300856B87 /* icon4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0702245C252DA96200856B87 /* icon4.png */; };
 		07022461252EAF7200856B87 /* aurora.png in Resources */ = {isa = PBXBuildFile; fileRef = 07022460252EAF7100856B87 /* aurora.png */; };
+		070224632531870D00856B87 /* back3.png in Resources */ = {isa = PBXBuildFile; fileRef = 070224622531870D00856B87 /* back3.png */; };
+		0702246625318C1600856B87 /* back5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0702246425318C1500856B87 /* back5.png */; };
+		0702246725318C1600856B87 /* back4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0702246525318C1600856B87 /* back4.png */; };
 		071EC79925145D1500D9AB1A /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EC79825145D1500D9AB1A /* Diary.swift */; };
 		071EC79B25145F6E00D9AB1A /* DiaryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */; };
 		0745BE102522FD8B00C42B60 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 0745BE0F2522FD8B00C42B60 /* setting.png */; };
@@ -57,6 +60,9 @@
 		0702245B252DA96200856B87 /* icon6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon6.png; sourceTree = "<group>"; };
 		0702245C252DA96200856B87 /* icon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon4.png; sourceTree = "<group>"; };
 		07022460252EAF7100856B87 /* aurora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aurora.png; sourceTree = "<group>"; };
+		070224622531870D00856B87 /* back3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back3.png; sourceTree = "<group>"; };
+		0702246425318C1500856B87 /* back5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back5.png; sourceTree = "<group>"; };
+		0702246525318C1600856B87 /* back4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back4.png; sourceTree = "<group>"; };
 		071EC79825145D1500D9AB1A /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
 		071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryEditViewController.swift; sourceTree = "<group>"; };
 		0745BE0F2522FD8B00C42B60 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 				07E1A9F8251875AB002D9A40 /* saveimage.png */,
 				0702244C252D952700856B87 /* back1.png */,
 				0702244E252DA14900856B87 /* back2.png */,
+				070224622531870D00856B87 /* back3.png */,
+				0702246525318C1600856B87 /* back4.png */,
+				0702246425318C1500856B87 /* back5.png */,
 				07022452252DA8DC00856B87 /* icon2.png */,
 				07022460252EAF7100856B87 /* aurora.png */,
 				07022453252DA8DC00856B87 /* icon3.png */,
@@ -230,6 +239,8 @@
 				07022457252DA8DC00856B87 /* icon2.png in Resources */,
 				0702244F252DA14900856B87 /* back2.png in Resources */,
 				0702244D252D952700856B87 /* back1.png in Resources */,
+				0702246625318C1600856B87 /* back5.png in Resources */,
+				0702246725318C1600856B87 /* back4.png in Resources */,
 				0769E993251058D400CD6C47 /* background.png in Resources */,
 				070224432525AF1800856B87 /* effect.png in Resources */,
 				0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */,
@@ -238,6 +249,7 @@
 				0702245D252DA96300856B87 /* icon5.png in Resources */,
 				0769E9972510AD6200CD6C47 /* GoogleService-Info.plist in Resources */,
 				07022461252EAF7200856B87 /* aurora.png in Resources */,
+				070224632531870D00856B87 /* back3.png in Resources */,
 				0769E986250F478600CD6C47 /* Assets.xcassets in Resources */,
 				070224492525B07D00856B87 /* back.png in Resources */,
 				0702245F252DA96300856B87 /* icon4.png in Resources */,
