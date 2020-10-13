@@ -51,6 +51,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     /// ボタンが指から離れたタイミングで呼ばれます。
     @IBAction func didTouchUpInsideButton() {
+        
         // バウンド処理です
         UIView.animate(withDuration: 0.5,
                        delay: 0.0,
@@ -65,7 +66,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     @IBAction func imageButtonChange(_ sender: Any) {
         
-        let image = UIImage(named: "icon")
+        let image = UIImage(named: "feeling1after")
         let state = UIControl.State.normal
         
         feelingButton1.setImage(image, for: state)

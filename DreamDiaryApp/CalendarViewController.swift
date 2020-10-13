@@ -78,7 +78,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     }
     
     var displayImageNo = 0
-    var imageNameArray = ["icon","icon2","icon3","icon4","icon5","icon6",]
+    var imageNameArray = ["feeling1after","feeling2after","feeling3after","feeling4after","feeling5after","feeling6after",]
     
     func displayImage(displayImageNo: Int) {
         

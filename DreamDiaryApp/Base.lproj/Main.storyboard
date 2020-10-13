@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back3.png" translatesAutoresizingMaskIntoConstraints="NO" id="2SO-fG-VM6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundmoon.png" translatesAutoresizingMaskIntoConstraints="NO" id="2SO-fG-VM6">
                                 <rect key="frame" x="-33" y="-25" width="447" height="921"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -58,7 +58,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-HZ-0Iq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="0DR-HZ-0Iq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -83,7 +83,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Y2-h7J">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Y2-h7J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-NO-NOR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-NO-NOR">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -163,7 +163,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back1.png" id="y1p-Ke-4ft">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="y1p-Ke-4ft">
                                 <rect key="frame" x="0.0" y="-7" width="414" height="910"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -295,7 +295,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="w8A-aK-h04">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="w8A-aK-h04">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -318,7 +318,7 @@
                                     <constraint firstAttribute="width" constant="40" id="R8a-uj-3qJ"/>
                                     <constraint firstAttribute="height" constant="40" id="u3f-EG-D3S"/>
                                 </constraints>
-                                <state key="normal" title="嬉" image="icon.png"/>
+                                <state key="normal" title="嬉" image="feeling1before.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton" destination="JUr-RH-F7F" eventType="touchDown" id="80g-jB-llF"/>
                                     <action selector="didTouchDragExitButton" destination="JUr-RH-F7F" eventType="touchDragExit" id="mZh-gn-MUL"/>
@@ -334,7 +334,7 @@
                                     <constraint firstAttribute="height" constant="40" id="3tV-4A-59U"/>
                                     <constraint firstAttribute="width" constant="40" id="bRB-ef-mdS"/>
                                 </constraints>
-                                <state key="normal" title="笑" image="icon2.png"/>
+                                <state key="normal" title="笑" image="feeling2before.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton2" destination="JUr-RH-F7F" eventType="touchDown" id="GNG-kI-YGq"/>
                                     <action selector="didTouchDragExitButton2" destination="JUr-RH-F7F" eventType="touchDragExit" id="e1u-2z-BVr"/>
@@ -349,7 +349,7 @@
                                     <constraint firstAttribute="width" constant="40" id="J2P-qx-pst"/>
                                     <constraint firstAttribute="height" constant="40" id="ThL-jD-Naw"/>
                                 </constraints>
-                                <state key="normal" title="怖" image="icon3.png"/>
+                                <state key="normal" title="怖" image="feeling3before.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton3" destination="JUr-RH-F7F" eventType="touchDown" id="X8v-mR-nWv"/>
                                     <action selector="didTouchDragExitButton3" destination="JUr-RH-F7F" eventType="touchDragExit" id="CkT-CV-t5I"/>
@@ -364,7 +364,7 @@
                                     <constraint firstAttribute="width" constant="40" id="NUl-9Y-uTZ"/>
                                     <constraint firstAttribute="height" constant="40" id="bCZ-uN-3ol"/>
                                 </constraints>
-                                <state key="normal" title="悲" image="icon4.png"/>
+                                <state key="normal" title="悲" image="feeling4before.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton4" destination="JUr-RH-F7F" eventType="touchDown" id="1c3-ug-AdH"/>
                                     <action selector="didTouchDragExitButton4" destination="JUr-RH-F7F" eventType="touchDragExit" id="vSW-9Z-sEV"/>
@@ -379,7 +379,7 @@
                                     <constraint firstAttribute="width" constant="40" id="a4c-dB-qhm"/>
                                     <constraint firstAttribute="height" constant="40" id="g7p-jA-cHE"/>
                                 </constraints>
-                                <state key="normal" title="怒" image="icon5.png"/>
+                                <state key="normal" title="怒" image="feeling5before.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton5" destination="JUr-RH-F7F" eventType="touchDown" id="xDB-MU-42X"/>
                                     <action selector="didTouchDragExitButton5" destination="JUr-RH-F7F" eventType="touchDragExit" id="qB7-bS-GFc"/>
@@ -394,7 +394,7 @@
                                     <constraint firstAttribute="height" constant="40" id="GzZ-bQ-0ei"/>
                                     <constraint firstAttribute="width" constant="40" id="NhB-fG-uX4"/>
                                 </constraints>
-                                <state key="normal" title="無" image="icon6.png"/>
+                                <state key="normal" title="無" image="feeling6before.png"/>
                                 <connections>
                                     <action selector="didTouchDownButton6" destination="JUr-RH-F7F" eventType="touchDown" id="8xG-RA-7z8"/>
                                     <action selector="didTouchDragExitButton6" destination="JUr-RH-F7F" eventType="touchDragExit" id="Zva-h3-Fyn"/>
@@ -540,7 +540,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="back1.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Lh-w8T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Lh-w8T">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -584,17 +584,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back1.png" width="215" height="294"/>
-        <image name="back3.png" width="291" height="627"/>
+        <image name="background.png" width="836.6400146484375" height="1110"/>
+        <image name="backgroundmoon.png" width="255.08570861816406" height="551.93145751953125"/>
         <image name="bed.double.fill" catalog="system" width="128" height="80"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="icon.png" width="43" height="42"/>
-        <image name="icon2.png" width="88" height="83"/>
-        <image name="icon3.png" width="81" height="74"/>
-        <image name="icon4.png" width="78" height="81"/>
-        <image name="icon5.png" width="93" height="81"/>
-        <image name="icon6.png" width="85" height="82"/>
+        <image name="feeling1before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling2before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling3before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling4before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling5before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling6before.png" width="210.65142822265625" height="210.65142822265625"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="moon.zzz" catalog="system" width="118" height="128"/>
     </resources>
