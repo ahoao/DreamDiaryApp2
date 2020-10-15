@@ -25,6 +25,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var displayTagView: TagListView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var favoriteDreamButton: UIButton!
+    
     
     @IBOutlet weak var feelingButton1: UIButton!
     
@@ -107,6 +109,15 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         }, completion: nil)
     }
     
+    
+    @IBAction func imageButtonChange2(_ sender: Any) {
+        let image = UIImage(named: "feeling2after")
+               let state = UIControl.State.normal
+               
+               feelingButton2.setImage(image, for: state)
+    }
+    
+    
     @IBOutlet weak var feelingButton3: UIButton!
     
     /// ボタンを押したタイミングで呼ばれます。
@@ -138,6 +149,14 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                         
                         self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
+    }
+    
+    
+    @IBAction func imageButtonChange3(_ sender: Any) {
+        let image = UIImage(named: "feeling3after")
+                      let state = UIControl.State.normal
+                      
+                      feelingButton3.setImage(image, for: state)
     }
     
     @IBOutlet weak var feelingButton4: UIButton!
@@ -173,6 +192,14 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         }, completion: nil)
     }
     
+    @IBAction func imageButtonChange4(_ sender: Any) {
+        let image = UIImage(named: "feeling4after")
+        let state = UIControl.State.normal
+        
+        feelingButton4.setImage(image, for: state)
+    }
+    
+    
     @IBOutlet weak var feelingButton5: UIButton!
     
     /// ボタンを押したタイミングで呼ばれます。
@@ -204,6 +231,14 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                         
                         self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
+    }
+    
+    
+    @IBAction func imageButtonChange5(_ sender: Any) {
+        let image = UIImage(named: "feeling5after")
+        let state = UIControl.State.normal
+        
+        feelingButton5.setImage(image, for: state)
     }
     
     @IBOutlet weak var feelingButton6: UIButton!
@@ -240,6 +275,13 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     }
     
     
+    @IBAction func imageButtonChange6(_ sender: Any) {
+        let image = UIImage(named: "feeling6after")
+        let state = UIControl.State.normal
+        
+        feelingButton5.setImage(image, for: state)
+        
+    }
     
     var diary: Diary! // 受け皿の用意
     
