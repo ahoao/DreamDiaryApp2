@@ -11,6 +11,7 @@ class Diary: Object {
     @objc dynamic var tag:String = ""
     @objc dynamic var feelingTag:Int = 0
     @objc dynamic var date: String = ""
+    @objc dynamic var favoriteDream:Int = 0
     
     open var primaryKey: String {
          return "content"

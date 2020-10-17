@@ -412,7 +412,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タグを入力する" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCE-DE-ug1">
-                                <rect key="frame" x="20" y="476" width="374" height="34"/>
+                                <rect key="frame" x="20" y="444" width="374" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="3bW-Hc-lKG"/>
@@ -427,7 +427,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ey9-Af-CDU" customClass="TagListView" customModule="TagListView">
-                                <rect key="frame" x="20" y="420" width="374" height="48"/>
+                                <rect key="frame" x="20" y="420" width="374" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -474,6 +474,9 @@
                                 <state key="normal" title="よく見る夢に登録">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="favoriteDreamButton:" destination="JUr-RH-F7F" eventType="touchUpInside" id="bwS-Zy-Sdb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -510,7 +513,6 @@
                             <constraint firstItem="PGR-6d-0YX" firstAttribute="leading" secondItem="iwB-re-PGu" secondAttribute="leading" constant="20" id="jJL-f5-yLB"/>
                             <constraint firstItem="xCE-DE-ug1" firstAttribute="top" secondItem="Ey9-Af-CDU" secondAttribute="bottom" constant="8" id="nWP-pl-tTA"/>
                             <constraint firstItem="PGR-6d-0YX" firstAttribute="leading" secondItem="Pem-kl-t8O" secondAttribute="leading" id="pEP-qP-XAM"/>
-                            <constraint firstItem="iwB-re-PGu" firstAttribute="bottom" secondItem="xCE-DE-ug1" secondAttribute="bottom" constant="298" id="pHU-n1-luE"/>
                             <constraint firstItem="iwB-re-PGu" firstAttribute="trailing" secondItem="2uo-CR-Eve" secondAttribute="trailing" constant="150" id="rP5-5x-8wP"/>
                             <constraint firstItem="PGR-6d-0YX" firstAttribute="top" secondItem="cVZ-gf-JHi" secondAttribute="bottom" constant="20" id="ua0-bZ-Tfh"/>
                             <constraint firstItem="iwB-re-PGu" firstAttribute="trailing" secondItem="H6a-60-QpR" secondAttribute="trailing" constant="150" id="yd2-Ps-W4U"/>
