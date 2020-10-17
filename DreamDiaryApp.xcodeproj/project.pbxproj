@@ -29,7 +29,6 @@
 		076BE8F725341B0B005165F6 /* feeling1before.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE8F125341B0B005165F6 /* feeling1before.png */; };
 		076BE8F825341B0B005165F6 /* feeling5before.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE8F225341B0B005165F6 /* feeling5before.png */; };
 		076BE8F925341B0B005165F6 /* feeling6before.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE8F325341B0B005165F6 /* feeling6before.png */; };
-		076BE9072535977B005165F6 /* feeling1after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE9062535977A005165F6 /* feeling1after.png */; };
 		076BE90D2535999E005165F6 /* feeling5after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE9082535999D005165F6 /* feeling5after.png */; };
 		076BE90E2535999E005165F6 /* feeling6after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE9092535999D005165F6 /* feeling6after.png */; };
 		076BE90F2535999E005165F6 /* feeling3after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE90A2535999E005165F6 /* feeling3after.png */; };
@@ -68,7 +67,6 @@
 		076BE8F125341B0B005165F6 /* feeling1before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling1before.png; sourceTree = "<group>"; };
 		076BE8F225341B0B005165F6 /* feeling5before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling5before.png; sourceTree = "<group>"; };
 		076BE8F325341B0B005165F6 /* feeling6before.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling6before.png; sourceTree = "<group>"; };
-		076BE9062535977A005165F6 /* feeling1after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = feeling1after.png; path = "../../../Downloads/アプリデザインデータ/感情アイコン①/feeling1after.png"; sourceTree = "<group>"; };
 		076BE9082535999D005165F6 /* feeling5after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling5after.png; sourceTree = "<group>"; };
 		076BE9092535999D005165F6 /* feeling6after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling6after.png; sourceTree = "<group>"; };
 		076BE90A2535999E005165F6 /* feeling3after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling3after.png; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				076BE8E9253418D0005165F6 /* backgroundstar.png */,
 				076BE8F125341B0B005165F6 /* feeling1before.png */,
 				076BE8F025341B0B005165F6 /* feeling2before.png */,
-				076BE9062535977A005165F6 /* feeling1after.png */,
 				076BE924253ADFC6005165F6 /* feeling1after.png */,
 				076BE90B2535999E005165F6 /* feeling2after.png */,
 				076BE90A2535999E005165F6 /* feeling3after.png */,
@@ -245,7 +242,6 @@
 				076BE90F2535999E005165F6 /* feeling3after.png in Resources */,
 				076BE9102535999E005165F6 /* feeling2after.png in Resources */,
 				076BE8F425341B0B005165F6 /* feeling3before.png in Resources */,
-				076BE9072535977B005165F6 /* feeling1after.png in Resources */,
 				076BE9112535999E005165F6 /* feeling4after.png in Resources */,
 				076BE8F825341B0B005165F6 /* feeling5before.png in Resources */,
 				076BE8EB253418D0005165F6 /* backgroundmoon.png in Resources */,
