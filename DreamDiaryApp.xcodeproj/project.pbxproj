@@ -35,6 +35,9 @@
 		076BE90F2535999E005165F6 /* feeling3after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE90A2535999E005165F6 /* feeling3after.png */; };
 		076BE9102535999E005165F6 /* feeling2after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE90B2535999E005165F6 /* feeling2after.png */; };
 		076BE9112535999E005165F6 /* feeling4after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE90C2535999E005165F6 /* feeling4after.png */; };
+		076BE922253ADF47005165F6 /* favAfter.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE920253ADF46005165F6 /* favAfter.png */; };
+		076BE923253ADF47005165F6 /* favBefore.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE921253ADF47005165F6 /* favBefore.png */; };
+		076BE925253ADFC6005165F6 /* feeling1after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE924253ADFC6005165F6 /* feeling1after.png */; };
 		076DA3AD251339ED000F4867 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DA3AC251339ED000F4867 /* CalendarViewController.swift */; };
 		07E1A9FB25187645002D9A40 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1A9FA25187645002D9A40 /* ShareViewController.swift */; };
 		2C686DF4EEA81505350CE5B3 /* Pods_DreamDiaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */; };
@@ -71,6 +74,9 @@
 		076BE90A2535999E005165F6 /* feeling3after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling3after.png; sourceTree = "<group>"; };
 		076BE90B2535999E005165F6 /* feeling2after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling2after.png; sourceTree = "<group>"; };
 		076BE90C2535999E005165F6 /* feeling4after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling4after.png; sourceTree = "<group>"; };
+		076BE920253ADF46005165F6 /* favAfter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favAfter.png; sourceTree = "<group>"; };
+		076BE921253ADF47005165F6 /* favBefore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favBefore.png; sourceTree = "<group>"; };
+		076BE924253ADFC6005165F6 /* feeling1after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling1after.png; sourceTree = "<group>"; };
 		076DA3AC251339ED000F4867 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		07E1A9FA25187645002D9A40 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -130,6 +136,7 @@
 				076BE8F125341B0B005165F6 /* feeling1before.png */,
 				076BE8F025341B0B005165F6 /* feeling2before.png */,
 				076BE9062535977A005165F6 /* feeling1after.png */,
+				076BE924253ADFC6005165F6 /* feeling1after.png */,
 				076BE90B2535999E005165F6 /* feeling2after.png */,
 				076BE90A2535999E005165F6 /* feeling3after.png */,
 				076BE90C2535999E005165F6 /* feeling4after.png */,
@@ -139,6 +146,8 @@
 				076BE8EF25341B0B005165F6 /* feeling4before.png */,
 				076BE8F225341B0B005165F6 /* feeling5before.png */,
 				076BE8F325341B0B005165F6 /* feeling6before.png */,
+				076BE920253ADF46005165F6 /* favAfter.png */,
+				076BE921253ADF47005165F6 /* favBefore.png */,
 				0769E987250F478600CD6C47 /* LaunchScreen.storyboard */,
 				0769E98A250F478600CD6C47 /* Info.plist */,
 				0769E9962510AD6200CD6C47 /* GoogleService-Info.plist */,
@@ -229,6 +238,7 @@
 				076BE8EC253418D0005165F6 /* backgroundstar.png in Resources */,
 				076BE90D2535999E005165F6 /* feeling5after.png in Resources */,
 				076BE8F625341B0B005165F6 /* feeling2before.png in Resources */,
+				076BE922253ADF47005165F6 /* favAfter.png in Resources */,
 				076BE90E2535999E005165F6 /* feeling6after.png in Resources */,
 				0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */,
 				076BE8F925341B0B005165F6 /* feeling6before.png in Resources */,
@@ -241,6 +251,8 @@
 				076BE8EB253418D0005165F6 /* backgroundmoon.png in Resources */,
 				0769E9972510AD6200CD6C47 /* GoogleService-Info.plist in Resources */,
 				0769E986250F478600CD6C47 /* Assets.xcassets in Resources */,
+				076BE925253ADFC6005165F6 /* feeling1after.png in Resources */,
+				076BE923253ADF47005165F6 /* favBefore.png in Resources */,
 				0769E984250F478400CD6C47 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

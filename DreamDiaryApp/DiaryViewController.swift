@@ -31,9 +31,45 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     @IBOutlet weak var feelingButton1: UIButton!
     
-    var favoriteDream = 0
+    var favoriteDream = false
     @IBAction func favoriteDreamButton(_ sender: Int) {
-        favoriteDream = 1
+           favoriteDream.toggle()
+    }
+    
+    
+    @IBAction func didTouchDownFavButton() {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        })
+    }
+    
+    @IBAction func didTouchDragExitFavButton() {
+        // 縮こまったボタンをアニメーションで元のサイズに戻します
+         UIView.animate(withDuration: 0.2, animations: {
+             self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+         })
+    }
+    
+    
+    @IBAction func didTouchUpInsideFavButton() {
+        // バウンド処理です
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 8,
+                       options: .curveEaseOut,
+                       animations: { () -> Void in
+                        
+                        self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+    }
+    
+    
+    @IBAction func imageFavButtonChange(_ sender: Any) {
+        let image = UIImage(named: "favAfter")
+         let state = UIControl.State.normal
+         
+         favoriteDreamButton.setImage(image, for: state)
     }
     
     @IBAction func feelingTag1(_ sender: UIButton) {
