@@ -18,6 +18,8 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     @IBOutlet weak var tagDisplayLabel: UILabel!
     @IBOutlet weak var diaryDisplayLabel: UILabel!
     @IBOutlet weak var feelingDisplayImage: UIImageView!
+    @IBOutlet weak var favDisplayImage: UIImageView!
+    
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     override func viewDidLoad() {
@@ -27,7 +29,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     
     //カレンダー部分
     let dateView = FSCalendar(frame: CGRect(x: 0, y: 30, width: w, height: 400))
-
+    
     @IBOutlet weak var calendar: FSCalendar!
     
     
@@ -38,10 +40,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
         self.backgroundImageView.frame.origin = startOrigin
         UIView.animate(withDuration: 12.0,
-              delay: 0.0,
-              options: [.repeat, .curveLinear],
-              animations:{ self.backgroundImageView.frame.origin = endOrigin },
-              completion: nil)
+                       delay: 0.0,
+                       options: [.repeat, .curveLinear],
+                       animations:{ self.backgroundImageView.frame.origin = endOrigin },
+                       completion: nil)
         
         //カレンダー設定
         self.dateView.dataSource = self
@@ -65,12 +67,11 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         view.addSubview(tagDisplayLabel)
         
         //スケジュール内容表示設定
-       diaryDisplayLabel.text = ""
+        diaryDisplayLabel.text = ""
         diaryDisplayLabel.font = UIFont.systemFont(ofSize: 18.0)
         diaryDisplayLabel.textColor = .white
         view.addSubview(diaryDisplayLabel)
-        
-        
+    
         //        feelingbutton表示設定
         let selectedImage = UIImage(named: "icon")
         feelingDisplayImage.image = selectedImage
@@ -90,6 +91,14 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         // Image Viewに読み込んだ画像をセット
         feelingDisplayImage.image = selectedImage
+    }
+    
+    //     fav表示
+    func favImage(favImage: Bool){
+        let selectedImage = UIImage(named: "favAfter")
+       
+        // Image Viewに読み込んだ画像をセット
+        favDisplayImage.image = selectedImage
     }
     
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
@@ -172,6 +181,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         tagDisplayLabel.text = ""
         feelingDisplayImage.image = nil
+        favDisplayImage.image = nil
         
         //スケジュール取得
         let realm = try! Realm()
@@ -186,14 +196,15 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
                 diaryDisplayLabel.text = resultData.content
                 tagDisplayLabel.text = resultData.tag
                 displayImage(displayImageNo: resultData.feelingTag)
+                favImage(favImage: resultData.favoriteDream)
                 print("diaryDisplayLabel.text =", diaryDisplayLabel.text)
                 view.addSubview(diaryDisplayLabel)
             }
         }
-             
-            
-          }
+        
+        
     }
-    
-    
+}
+
+
 

@@ -223,7 +223,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-vA-9zg">
-                                <rect key="frame" x="274" y="461" width="100" height="100"/>
+                                <rect key="frame" x="195" y="461" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-6Y-AgU">
+                                <rect key="frame" x="303" y="461" width="91" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -243,6 +247,7 @@
                         <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
                         <outlet property="dateDisplayLabel" destination="yeR-BB-g6a" id="NBY-zV-WxD"/>
                         <outlet property="diaryDisplayLabel" destination="MDa-CA-hb0" id="Yie-gu-kGe"/>
+                        <outlet property="favDisplayImage" destination="ZMF-6Y-AgU" id="l1y-fN-VaO"/>
                         <outlet property="feelingDisplayImage" destination="BmK-vA-9zg" id="mPF-JT-alt"/>
                         <outlet property="tagDisplayLabel" destination="6lG-5i-WOa" id="R3q-JV-fS8"/>
                     </connections>
@@ -474,11 +479,11 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTouchDownFavButton:" destination="JUr-RH-F7F" eventType="touchUpInside" id="2c0-9G-kAx"/>
-                                    <action selector="didTouchDragExitFavButton:" destination="JUr-RH-F7F" eventType="touchUpInside" id="Uxq-80-zhG"/>
-                                    <action selector="didTouchUpInsideFavButton:" destination="JUr-RH-F7F" eventType="touchUpInside" id="n03-4B-1WV"/>
-                                    <action selector="favoriteDreamButton:" destination="JUr-RH-F7F" eventType="touchUpInside" id="bwS-Zy-Sdb"/>
-                                    <action selector="imageFavButtonChange:" destination="JUr-RH-F7F" eventType="touchUpInside" id="RiC-Vh-jFb"/>
+                                    <action selector="didTouchDownFavButton" destination="JUr-RH-F7F" eventType="touchDown" id="VLw-W4-mLH"/>
+                                    <action selector="didTouchDragExitFavButton" destination="JUr-RH-F7F" eventType="touchDragExit" id="ETU-mp-R0p"/>
+                                    <action selector="didTouchUpInsideFavButton" destination="JUr-RH-F7F" eventType="touchUpInside" id="UaN-0p-Rxj"/>
+                                    <action selector="favoriteDreamButton:" destination="JUr-RH-F7F" eventType="touchUpInside" id="5Bo-NP-A7b"/>
+                                    <action selector="imageFavButtonChange:" destination="JUr-RH-F7F" eventType="touchUpInside" id="ple-y1-jiz"/>
                                 </connections>
                             </button>
                         </subviews>

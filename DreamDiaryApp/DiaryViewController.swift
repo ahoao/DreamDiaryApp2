@@ -33,7 +33,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     var favoriteDream = false
     @IBAction func favoriteDreamButton(_ sender: Int) {
-           favoriteDream.toggle()
+        favoriteDream.toggle()
+        
     }
     
     
@@ -45,9 +46,9 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     @IBAction func didTouchDragExitFavButton() {
         // 縮こまったボタンをアニメーションで元のサイズに戻します
-         UIView.animate(withDuration: 0.2, animations: {
-             self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-         })
+        UIView.animate(withDuration: 0.2, animations: {
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
     }
     
     
@@ -67,9 +68,14 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     @IBAction func imageFavButtonChange(_ sender: Any) {
         let image = UIImage(named: "favAfter")
-         let state = UIControl.State.normal
-         
-         favoriteDreamButton.setImage(image, for: state)
+        let state = UIControl.State.normal
+        
+        favoriteDreamButton.setImage(image, for: state)
+        if favoriteDream {
+            favoriteDreamButton.setImage(UIImage(named: "favAfter"), for: .normal)
+        } else {
+            favoriteDreamButton.setImage(UIImage(named: "favBefore"), for: .normal)
+        }
     }
     
     @IBAction func feelingTag1(_ sender: UIButton) {
@@ -116,7 +122,24 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let state = UIControl.State.normal
         
         feelingButton1.setImage(image, for: state)
-        
+        if feelingButtonTag == 1 {
+            // feelingButton1だけbeforeにし、他はafterにする
+            feelingButton1.setImage(UIImage(named: "feeling1before"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2after"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3after"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4after"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5after"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6after"), for: .normal)
+            
+        } else {
+            // feelingButton1だけafterにし、他はbeforeにする
+            feelingButton1.setImage(UIImage(named: "feeling1after"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2before"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3before"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4before"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5before"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6before"), for: .normal)
+        }
     }
     
     
@@ -156,9 +179,27 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     @IBAction func imageButtonChange2(_ sender: Any) {
         let image = UIImage(named: "feeling2after")
-               let state = UIControl.State.normal
-               
-               feelingButton2.setImage(image, for: state)
+        let state = UIControl.State.normal
+        
+        feelingButton2.setImage(image, for: state)
+        
+        if feelingButtonTag == 1 {
+            // feelingButton1だけafterにし、他はbeforeにする
+            feelingButton1.setImage(UIImage(named: "feeling1before"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2after"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3before"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4before"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5before"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6before"), for: .normal)
+        } else {
+            // feelingButton1だけbeforeにし、他はafterにする
+            feelingButton1.setImage(UIImage(named: "feeling1after"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2before"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3after"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4after"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5after"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6after"), for: .normal)
+        }
     }
     
     
@@ -198,9 +239,26 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     @IBAction func imageButtonChange3(_ sender: Any) {
         let image = UIImage(named: "feeling3after")
-                      let state = UIControl.State.normal
-                      
-                      feelingButton3.setImage(image, for: state)
+        let state = UIControl.State.normal
+        
+        feelingButton3.setImage(image, for: state)
+        if feelingButtonTag == 1 {
+            // feelingButton1だけbeforeにし、他はafterにする
+            feelingButton1.setImage(UIImage(named: "feeling1after"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2after"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3before"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4after"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5after"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6after"), for: .normal)
+        } else {
+            // feelingButton1だけafterにし、他はbeforeにする
+            feelingButton1.setImage(UIImage(named: "feeling1before"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2before"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3after"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4before"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5before"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6before"), for: .normal)
+        }
     }
     
     @IBOutlet weak var feelingButton4: UIButton!
@@ -241,6 +299,23 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let state = UIControl.State.normal
         
         feelingButton4.setImage(image, for: state)
+        if feelingButtonTag == 1 {            // feelingButton1だけbeforeにし、他はafterにする
+            feelingButton1.setImage(UIImage(named: "feeling1after"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2after"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3after"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4before"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5after"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6after"), for: .normal)
+            
+        } else {
+            // feelingButton1だけafterにし、他はbeforeにする
+            feelingButton1.setImage(UIImage(named: "feeling1before"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2before"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3before"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4after"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5before"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6before"), for: .normal)
+        }
     }
     
     
@@ -283,6 +358,24 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let state = UIControl.State.normal
         
         feelingButton5.setImage(image, for: state)
+        if feelingButtonTag == 1 {
+            // feelingButton1だけbeforeにし、他はafterにする
+            feelingButton1.setImage(UIImage(named: "feeling1after"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2after"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3after"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4after"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5before"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6after"), for: .normal)
+            
+        } else {
+            // feelingButton1だけafterにし、他はbeforeにする
+            feelingButton1.setImage(UIImage(named: "feeling1before"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2before"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3before"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4before"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5after"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6before"), for: .normal)
+        }
     }
     
     @IBOutlet weak var feelingButton6: UIButton!
@@ -324,6 +417,24 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let state = UIControl.State.normal
         
         feelingButton5.setImage(image, for: state)
+        if feelingButtonTag == 1 {
+            // feelingButton1だけbeforeにし、他はafterにする
+            feelingButton1.setImage(UIImage(named: "feeling1after"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2after"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3after"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4after"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5after"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6before"), for: .normal)
+            
+        } else {
+            // feelingButton1だけafterにし、他はbeforeにする
+            feelingButton1.setImage(UIImage(named: "feeling1before"), for: .normal)
+            feelingButton2.setImage(UIImage(named: "feeling2before"), for: .normal)
+            feelingButton3.setImage(UIImage(named: "feeling3before"), for: .normal)
+            feelingButton4.setImage(UIImage(named: "feeling4before"), for: .normal)
+            feelingButton5.setImage(UIImage(named: "feeling5before"), for: .normal)
+            feelingButton6.setImage(UIImage(named: "feeling6after"), for: .normal)
+        }
         
     }
     
@@ -343,7 +454,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         try! realm.write {
             //日付表示の内容とスケジュール入力の内容が書き込まれる。
             let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag, "date": stringDate, "favoriteDream": favoriteDream])]
-
+            
             print("データ書き込み完了")
             
             realm.add(Events)
@@ -352,8 +463,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         
         print("データ書き込み完了")
         
-        //前のページに戻る
-        //     dismiss(animated: true, completion: nil)
+        //        前のページに戻る
+        dismiss(animated: true, completion: nil)
         
         
     }
@@ -376,10 +487,10 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
         self.backgroundImageView.frame.origin = startOrigin
         UIView.animate(withDuration: 12.0,
-              delay: 0.0,
-              options: [.repeat, .curveLinear],
-              animations:{ self.backgroundImageView.frame.origin = endOrigin },
-              completion: nil)
+                       delay: 0.0,
+                       options: [.repeat, .curveLinear],
+                       animations:{ self.backgroundImageView.frame.origin = endOrigin },
+                       completion: nil)
         
         
         self.setView()
