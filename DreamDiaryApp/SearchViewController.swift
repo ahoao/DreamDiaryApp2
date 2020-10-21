@@ -38,8 +38,8 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     
   
     @IBOutlet weak var tagSearchBar: UISearchBar!
-    func searchBarButtonClicked(_ searchBar: UISearchBar) {
-        print("DEBUG searchBarButtonClickedが呼び出された")
-   self.performSegue(withIdentifier: "searchResult", sender: nil)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+     print("DEBUG searchBarButtonClickedが呼び出された")
+     self.performSegue(withIdentifier: "searchResult", sender: nil)
     }
 }
