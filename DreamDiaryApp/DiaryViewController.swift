@@ -9,6 +9,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     var feelingButtonTag = Int()
     var faveriteDream = 0
+    var tags: String = ""
     
     let MARGIN: CGFloat = 10
     
@@ -453,7 +454,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         
         try! realm.write {
             //日付表示の内容とスケジュール入力の内容が書き込まれる。
-            let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tagTextField.text!, "feelingTag": feelingButtonTag, "date": stringDate, "favoriteDream": favoriteDream])]
+            let Events = [Diary(value: ["content": diaryTextView.text as Any, "tag": tags, "feelingTag": feelingButtonTag, "date": stringDate, "favoriteDream": favoriteDream])]
             
             print("データ書き込み完了")
             
@@ -482,7 +483,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
-        
+
         let startOrigin = CGPoint.zero
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
         self.backgroundImageView.frame.origin = startOrigin
@@ -491,51 +492,50 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: [.repeat, .curveLinear],
                        animations:{ self.backgroundImageView.frame.origin = endOrigin },
                        completion: nil)
-        
-        
+
+
         self.setView()
-        
-        
-        
+
+
+
         tagTextField.delegate = self
-        
-        //        let feelingButtontag = feelingButton1.tag
-        
+
+
         // 枠のカラー
         diaryTextView.layer.borderColor = UIColor.white.cgColor
-        
+
         // 枠の幅
         diaryTextView.layer.borderWidth = 2.0
-        
+
         // 枠を角丸にする
         diaryTextView.layer.cornerRadius = 20.0
         diaryTextView.layer.masksToBounds = true
-        
+
         // 枠のカラー
         tagTextField.layer.borderColor = UIColor.white.cgColor
-        
+
         // 枠の幅
         tagTextField.layer.borderWidth = 2.0
-        
+
         // 枠を角丸にする
         tagTextField.layer.cornerRadius = 20.0
         tagTextField.layer.masksToBounds = true
-        
-        
+
+
     }
     func setView() {
-        
+
         view.addSubview(tagListView)
         view.addSubview(textField)
-        
+
         tagListView.frame = CGRect(x: MARGIN, y: 50, width: view.frame.width-MARGIN*2, height: 0)
-        
+
         // タグの削除ボタンを有効に
         tagListView.enableRemoveButton = true
-        
+
         // 今回は削除ボタン押された時の処理を行う
         tagListView.delegate = self
-        
+
         // タグの見た目を設定
         tagListView.alignment = .left
         tagListView.cornerRadius = 3
@@ -546,45 +546,47 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         tagListView.paddingY = 5
         tagListView.textFont = UIFont.systemFont(ofSize: 16)
         tagListView.tagBackgroundColor = UIColor.white
-        
+
         // タグ削除ボタンの見た目を設定
         tagListView.removeButtonIconSize = 10
         tagListView.removeIconLineColor = UIColor.black
-        
+
         // テキストフィールドは適当にセット
         textField.delegate = self
         textField.placeholder = "タグを入力してください"
         textField.returnKeyType = UIReturnKeyType.done
-        
+
         // レイアウト調整
         updateLayout()
     }
-    
+
     // テキストフィールドの完了ボタンが押されたら
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if 0 < textField.text!.count {
             // タグを追加
             //                tagListView.addTag(textField.text!)
             displayTagView.addTag(tagTextField.text!)
-            
+
             // テキストフィールドをクリアしてレイアウト調整
+            tags += textField.text!
+            
             textField.text = nil
             updateLayout()
         }
         return true
     }
-    
+
     // タグ削除ボタンが押された
     func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
         // リストからタグ削除
         sender.removeTagView(tagView)
         updateLayout()
     }
-    
+
     func updateLayout() {
         // タグ全体の高さを取得
         tagListView.frame.size = tagListView.intrinsicContentSize
-        
+
         textField.frame = CGRect(x: MARGIN, y: tagListView.frame.origin.y + tagListView.frame.height + 5, width: view.frame.width-MARGIN*2, height: 40)
     }
 }

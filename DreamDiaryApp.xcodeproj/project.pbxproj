@@ -37,6 +37,7 @@
 		076BE922253ADF47005165F6 /* favAfter.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE920253ADF46005165F6 /* favAfter.png */; };
 		076BE923253ADF47005165F6 /* favBefore.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE921253ADF47005165F6 /* favBefore.png */; };
 		076BE925253ADFC6005165F6 /* feeling1after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE924253ADFC6005165F6 /* feeling1after.png */; };
+		076BE92725401EBA005165F6 /* SearchResultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076BE92625401EBA005165F6 /* SearchResultNavigationController.swift */; };
 		076DA3AD251339ED000F4867 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DA3AC251339ED000F4867 /* CalendarViewController.swift */; };
 		07E1A9FB25187645002D9A40 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1A9FA25187645002D9A40 /* ShareViewController.swift */; };
 		2C686DF4EEA81505350CE5B3 /* Pods_DreamDiaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */; };
@@ -75,6 +76,7 @@
 		076BE920253ADF46005165F6 /* favAfter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favAfter.png; sourceTree = "<group>"; };
 		076BE921253ADF47005165F6 /* favBefore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favBefore.png; sourceTree = "<group>"; };
 		076BE924253ADFC6005165F6 /* feeling1after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling1after.png; sourceTree = "<group>"; };
+		076BE92625401EBA005165F6 /* SearchResultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultNavigationController.swift; sourceTree = "<group>"; };
 		076DA3AC251339ED000F4867 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		07E1A9FA25187645002D9A40 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				071EC79A25145F6E00D9AB1A /* DiaryEditViewController.swift */,
 				07E1A9FA25187645002D9A40 /* ShareViewController.swift */,
 				0702243E25247A7400856B87 /* SearchViewController.swift */,
+				076BE92625401EBA005165F6 /* SearchResultNavigationController.swift */,
 				0702244025247AC500856B87 /* AnalysisViewController.swift */,
 				0745BE112523014600C42B60 /* SettingViewController.swift */,
 				0769E982250F478400CD6C47 /* Main.storyboard */,
@@ -312,6 +315,7 @@
 				0745BE122523014600C42B60 /* SettingViewController.swift in Sources */,
 				071EC79925145D1500D9AB1A /* Diary.swift in Sources */,
 				07E1A9FB25187645002D9A40 /* ShareViewController.swift in Sources */,
+				076BE92725401EBA005165F6 /* SearchResultNavigationController.swift in Sources */,
 				071EC79B25145F6E00D9AB1A /* DiaryEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

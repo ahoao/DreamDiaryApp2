@@ -95,6 +95,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     
     //     fav表示
     func favImage(favImage: Bool){
+        if !favImage{
+            favDisplayImage.image = nil
+            return
+        }
         let selectedImage = UIImage(named: "favAfter")
        
         // Image Viewに読み込んだ画像をセット

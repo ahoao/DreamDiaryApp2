@@ -87,6 +87,89 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="気持ちで探す" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-5j-Qca">
+                                <rect key="frame" x="20" y="112" width="200" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-pv-LuV">
+                                <rect key="frame" x="20" y="166" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feeling1after.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="xaN-ko-oWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ys-NC-gbq">
+                                <rect key="frame" x="135" y="165" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feeling3after.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="WI2-ZI-FVy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qn-PW-XKz">
+                                <rect key="frame" x="201" y="241" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feeling4after.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="pcC-qR-QcD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-gE-UZb">
+                                <rect key="frame" x="281" y="164" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feeling5after.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="2Yq-tH-kzX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-dp-ys3">
+                                <rect key="frame" x="341" y="240" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feeling6after.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="f3c-Fh-4rB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="よく見る夢を探す" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQP-ro-dQ3">
+                                <rect key="frame" x="29" y="383" width="146" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWB-jy-q5W">
+                                <rect key="frame" x="178" y="454" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="favAfter.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="OBG-ic-n47"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワードで探す" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-75-UlM">
+                                <rect key="frame" x="29" y="576" width="146" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aow-my-Dvk">
+                                <rect key="frame" x="0.0" y="634" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tg-An-lGB">
+                                <rect key="frame" x="72" y="241" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feeling2after.png"/>
+                                <connections>
+                                    <segue destination="koN-mM-Vyd" kind="showDetail" id="a3z-0W-IoB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W0g-8f-0qt"/>
@@ -94,11 +177,19 @@
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="VRI-49-wjf"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="NJh-Y2-h7J" id="h4f-LN-TGh"/>
+                        <outlet property="searchFavButton" destination="YWB-jy-q5W" id="lZY-lh-xTX"/>
+                        <outlet property="searchFeeling1Button" destination="asZ-pv-LuV" id="zTq-Ja-FN3"/>
+                        <outlet property="searchFeeling2Button" destination="7tg-An-lGB" id="Ggq-0y-OTS"/>
+                        <outlet property="searchFeeling3Button" destination="7Ys-NC-gbq" id="Bez-j3-o6f"/>
+                        <outlet property="searchFeeling4Button" destination="7Qn-PW-XKz" id="oef-Oy-Ial"/>
+                        <outlet property="searchFeeling5Button" destination="Fbr-gE-UZb" id="xc6-Mf-OQ3"/>
+                        <outlet property="searchFeeling6Button" destination="Mld-dp-ys3" id="YJP-UW-YK2"/>
+                        <outlet property="tagSearchBar" destination="aow-my-Dvk" id="TvV-rv-fpb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0u-T4-mCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566.6666666666667" y="117.85714285714285"/>
+            <point key="canvasLocation" x="2012" y="121"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="vp6-r1-ks7">
@@ -153,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fco-0w-ooW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2279.7101449275365" y="120.53571428571428"/>
+            <point key="canvasLocation" x="3087" y="118"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="vLu-Hh-H23">
@@ -552,7 +643,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuq-4H-thH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wZi-J2-A1c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="782.60869565217399" y="983.70535714285711"/>
+            <point key="canvasLocation" x="783" y="990"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="uNq-1h-nru">
+            <objects>
+                <tableViewController id="b5m-LU-wFD" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Rd-nx-NyI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="f7q-lr-8iA">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f7q-lr-8iA" id="EZy-94-UOW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="b5m-LU-wFD" id="nPz-AH-Af3"/>
+                            <outlet property="delegate" destination="b5m-LU-wFD" id="8iS-83-acF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ZEj-Po-NVC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tw4-6v-uuo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2458" y="984"/>
+        </scene>
+        <!--Search Result Navigation Controller-->
+        <scene sceneID="q5j-Pc-MK0">
+            <objects>
+                <navigationController storyboardIdentifier="searchResult" id="koN-mM-Vyd" customClass="SearchResultNavigationController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZLh-dc-csk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="b5m-LU-wFD" kind="relationship" relationship="rootViewController" id="5Sz-o4-XvP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ck8-ky-Ddu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1538" y="984"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="rIy-6H-IfJ">
@@ -605,18 +741,28 @@
             <point key="canvasLocation" x="782.60869565217399" y="1776.5625"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="WI2-ZI-FVy"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="background.png" width="836.6400146484375" height="1110"/>
         <image name="backgroundmoon.png" width="255.08570861816406" height="551.93145751953125"/>
         <image name="bed.double.fill" catalog="system" width="128" height="80"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="favAfter.png" width="64" height="64"/>
         <image name="favBefore.png" width="64" height="64"/>
+        <image name="feeling1after.png" width="151.817138671875" height="156.54856872558594"/>
         <image name="feeling1before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling2after.png" width="174.24000549316406" height="174.24000549316406"/>
         <image name="feeling2before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling3after.png" width="180.41142272949219" height="180.41142272949219"/>
         <image name="feeling3before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling4after.png" width="183.08570861816406" height="175.06285095214844"/>
         <image name="feeling4before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling5after.png" width="178.76571655273438" height="167.86285400390625"/>
         <image name="feeling5before.png" width="210.65142822265625" height="210.65142822265625"/>
+        <image name="feeling6after.png" width="174" height="171.56571960449219"/>
         <image name="feeling6before.png" width="210.65142822265625" height="210.65142822265625"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="moon.zzz" catalog="system" width="118" height="128"/>
