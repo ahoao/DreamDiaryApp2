@@ -36,6 +36,18 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
         
     }
     
+    // segueが動作することをViewControllerに通知するメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // segueのIDを確認して特定のsegueのときのみ動作させる
+        if segue.identifier == "toFavViewController" {
+            // 2. 遷移先のViewControllerを取得
+            let next = segue.destination as? SearchResultViewController
+            // 3. １で用意した遷移先の変数に値を渡す
+            next?.outputFav = 
+        }
+    }
+    
     
     @IBOutlet weak var tagSearchBar: UISearchBar!
     

@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="782.60869565217399" y="120.53571428571428"/>
+            <point key="canvasLocation" x="954" y="121"/>
         </scene>
         <!--Analysis View Controller-->
         <scene sceneID="Pde-RQ-hrz">
@@ -73,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mUO-DP-U9Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2.8985507246376816" y="120.53571428571428"/>
+            <point key="canvasLocation" x="49" y="121"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="gbm-N5-8m4">
@@ -146,7 +146,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="favAfter.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="B6Y-fs-qIg"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFavViewController" id="B6Y-fs-qIg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワードで探す" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-75-UlM">
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fco-0w-ooW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3087" y="118"/>
+            <point key="canvasLocation" x="2977" y="121"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="vLu-Hh-H23">
@@ -345,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dd-Br-6eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-772.46376811594212" y="117.85714285714285"/>
+            <point key="canvasLocation" x="-772" y="118"/>
         </scene>
         <!--Diary Edit View Controller-->
         <scene sceneID="8BL-LV-Z23">
@@ -381,7 +381,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hh0-DV-1T7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="783" y="-782"/>
+            <point key="canvasLocation" x="955" y="-775"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="P4S-xn-yjL">
@@ -643,7 +643,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuq-4H-thH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wZi-J2-A1c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="783" y="990"/>
+            <point key="canvasLocation" x="954" y="990"/>
         </scene>
         <!--Search Result View Controller-->
         <scene sceneID="RTB-TA-Ojx">
@@ -774,7 +774,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2QF-AD-L95"/>
+        <segue reference="B6Y-fs-qIg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background.png" width="836.6400146484375" height="1110"/>

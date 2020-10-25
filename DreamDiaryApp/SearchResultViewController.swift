@@ -4,11 +4,19 @@ import RealmSwift
 class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var resultTableView: UITableView!
     
+    // 1. 遷移先に渡したい値を格納する変数を用意する
+      var outputFav : String?
+    var favoriteDream = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
         resultTableView.delegate = self
         resultTableView.dataSource = self
+        
+        //スケジュール取得
+        let realm = try! Realm()
+        outputFav = realm.objects(Diary.self).filter("favoriteDream = true")
     }
 
     // データの数（＝セルの数）を返すメソッド
@@ -28,11 +36,7 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 
-    
-    func searchResult(){
-    //スケジュール取得
-    let realm = try! Realm()
-    var result = realm.objects(Diary.self)
-    
+
+
     }
-}
+
