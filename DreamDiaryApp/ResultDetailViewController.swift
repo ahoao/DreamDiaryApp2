@@ -1,30 +1,41 @@
-//
-//  ResultDetailViewController.swift
-//  DreamDiaryApp
-//
-//  Created by Ao Nagasawa on 2020/10/27.
-//  Copyright © 2020 Ao.Nagasawa. All rights reserved.
-//
-
 import UIKit
+import RealmSwift
 
 class ResultDetailViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var dreamDateLabel: UILabel!
+    @IBOutlet weak var dreamcontentLabel: UILabel!
+    @IBOutlet weak var dreamTagLabel: UILabel!
+    
+    
+    @IBOutlet weak var dreamFeelingTagImage: UIImageView!
+    @IBOutlet weak var favoriteDreamImage: UIImageView!
+    
+    
+    
+    
+    let realm = try! Realm()
+    var diary: Diary!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
 
-        // Do any additional setup after loading the view.
+        self.diary.date = self.dreamDateLabel.text!
+        self.diary.content = self.dreamcontentLabel.text!
+        self.diary.tag = self.dreamTagLabel.text!
+        
+        print("dreamcontentLabel.text =", dreamcontentLabel.text)
+        view.addSubview(dreamcontentLabel)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
+
+

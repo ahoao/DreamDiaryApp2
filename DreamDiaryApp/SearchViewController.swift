@@ -37,7 +37,9 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     }
     
     // segueが動作することをViewControllerに通知するメソッド
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
         
         // segueのIDを確認して特定のsegueのときのみ動作させる
         if segue.identifier == "toFavViewController" {
@@ -77,6 +79,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
             // 3. １で用意した遷移先の変数に値を渡す
             let realm = try! Realm()
             vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 2").sorted(byKeyPath: "date")
+        }
             
             // segueのIDを確認して特定のsegueのときのみ動作させる
             if segue.identifier == "toFeel4ViewController" {
@@ -109,4 +112,4 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
             }
         }
     }
-}
+
