@@ -99,7 +99,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="feeling2after.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="Jkz-wl-Rvd"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel2ViewController" id="Jkz-wl-Rvd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ys-NC-gbq">
@@ -107,7 +107,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="feeling3after.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="8I7-Uk-rL5"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel3ViewController" id="8I7-Uk-rL5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Qn-PW-XKz">
@@ -115,7 +115,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="feeling4after.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="2QF-AD-L95"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel4ViewController" id="2QF-AD-L95"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-gE-UZb">
@@ -123,7 +123,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="feeling5after.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="ifF-sm-dCZ"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel5ViewController" id="ifF-sm-dCZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mld-dp-ys3">
@@ -131,7 +131,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="feeling6after.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="Rcs-qk-AFP"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel6ViewController" id="Rcs-qk-AFP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="よく見る夢を探す" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQP-ro-dQ3">
@@ -149,25 +149,12 @@
                                     <segue destination="5mW-iQ-WBf" kind="show" identifier="toFavViewController" id="B6Y-fs-qIg"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="キーワードで探す" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP2-75-UlM">
-                                <rect key="frame" x="29" y="576" width="146" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aow-my-Dvk">
-                                <rect key="frame" x="0.0" y="634" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-pv-LuV">
                                 <rect key="frame" x="20" y="165" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="feeling1after.png"/>
                                 <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" id="KYt-eu-T0m"/>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel1ViewController" id="KYt-eu-T0m"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -184,7 +171,6 @@
                         <outlet property="searchFeeling4Button" destination="7Qn-PW-XKz" id="oef-Oy-Ial"/>
                         <outlet property="searchFeeling5Button" destination="Fbr-gE-UZb" id="xc6-Mf-OQ3"/>
                         <outlet property="searchFeeling6Button" destination="Mld-dp-ys3" id="YJP-UW-YK2"/>
-                        <outlet property="tagSearchBar" destination="aow-my-Dvk" id="TvV-rv-fpb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x0u-T4-mCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -661,7 +647,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="OVP-Z6-1ci" detailTextLabel="U7P-Gg-J0l" style="IBUITableViewCellStyleSubtitle" id="7jm-mh-jNc">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7jm-mh-jNc" id="Vcz-8e-tLi">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7jm-mh-jNc" id="Vcz-8e-tLi">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -697,11 +683,28 @@
                     <navigationItem key="navigationItem" id="ojH-ZJ-Dfx"/>
                     <connections>
                         <outlet property="resultTableView" destination="QH2-z1-25F" id="7Iz-le-UMX"/>
+                        <segue destination="YHC-de-1Lv" kind="show" identifier="resultDetailSegue" id="snX-42-Ej0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcW-g4-f0Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2012" y="1738"/>
+        </scene>
+        <!--Result Detail View Controller-->
+        <scene sceneID="9BN-E6-7M0">
+            <objects>
+                <viewController storyboardIdentifier="ResultDetail" id="YHC-de-1Lv" customClass="ResultDetailViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A2A-7j-Qyq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="N5E-z5-fRK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j7D-X0-gIs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K8Y-nQ-7bZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="2470"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="rIy-6H-IfJ">
@@ -774,7 +777,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="B6Y-fs-qIg"/>
+        <segue reference="Rcs-qk-AFP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="background.png" width="836.6400146484375" height="1110"/>

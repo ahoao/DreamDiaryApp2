@@ -1,4 +1,5 @@
 import UIKit
+import RealmSwift
 
 class SearchViewController: UIViewController,UISearchBarDelegate {
     
@@ -7,7 +8,6 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     override func viewDidLoad() {
         backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
         
-        tagSearchBar.delegate = self
     }
     
     @IBOutlet weak var searchFeeling1Button: UIButton!
@@ -38,20 +38,75 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     
     // segueが動作することをViewControllerに通知するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         // segueのIDを確認して特定のsegueのときのみ動作させる
         if segue.identifier == "toFavViewController" {
             // 2. 遷移先のViewControllerを取得
-            let next = segue.destination as? SearchResultViewController
+            let nc = segue.destination as? UINavigationController
+            let vc = nc?.topViewController as! SearchResultViewController
             // 3. １で用意した遷移先の変数に値を渡す
-            next?.outputFav = 
+            let realm = try! Realm()
+            vc.searchResultArray = realm.objects(Diary.self).filter("favoriteDream = true").sorted(byKeyPath: "date")
+        }
+        
+        // segueのIDを確認して特定のsegueのときのみ動作させる
+        if segue.identifier == "toFeel1ViewController" {
+            // 2. 遷移先のViewControllerを取得
+            let nc = segue.destination as? UINavigationController
+            let vc = nc?.topViewController as! SearchResultViewController
+            // 3. １で用意した遷移先の変数に値を渡す
+            let realm = try! Realm()
+            vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 0").sorted(byKeyPath: "date")
+        }
+        
+        // segueのIDを確認して特定のsegueのときのみ動作させる
+        if segue.identifier == "toFeel2ViewController" {
+            // 2. 遷移先のViewControllerを取得
+            let nc = segue.destination as? UINavigationController
+            let vc = nc?.topViewController as! SearchResultViewController
+            // 3. １で用意した遷移先の変数に値を渡す
+            let realm = try! Realm()
+            vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 1").sorted(byKeyPath: "date")
+        }
+        
+        // segueのIDを確認して特定のsegueのときのみ動作させる
+        if segue.identifier == "toFeel3ViewController" {
+            // 2. 遷移先のViewControllerを取得
+            let nc = segue.destination as? UINavigationController
+            let vc = nc?.topViewController as! SearchResultViewController
+            // 3. １で用意した遷移先の変数に値を渡す
+            let realm = try! Realm()
+            vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 2").sorted(byKeyPath: "date")
+            
+            // segueのIDを確認して特定のsegueのときのみ動作させる
+            if segue.identifier == "toFeel4ViewController" {
+                // 2. 遷移先のViewControllerを取得
+                let nc = segue.destination as? UINavigationController
+                let vc = nc?.topViewController as! SearchResultViewController
+                // 3. １で用意した遷移先の変数に値を渡す
+                let realm = try! Realm()
+                vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 3").sorted(byKeyPath: "date")
+            }
+            
+            // segueのIDを確認して特定のsegueのときのみ動作させる
+            if segue.identifier == "toFeel5ViewController" {
+                // 2. 遷移先のViewControllerを取得
+                let nc = segue.destination as? UINavigationController
+                let vc = nc?.topViewController as! SearchResultViewController
+                // 3. １で用意した遷移先の変数に値を渡す
+                let realm = try! Realm()
+                vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 4").sorted(byKeyPath: "date")
+            }
+            
+            // segueのIDを確認して特定のsegueのときのみ動作させる
+            if segue.identifier == "toFeel6ViewController" {
+                // 2. 遷移先のViewControllerを取得
+                let nc = segue.destination as? UINavigationController
+                let vc = nc?.topViewController as! SearchResultViewController
+                // 3. １で用意した遷移先の変数に値を渡す
+                let realm = try! Realm()
+                vc.searchResultArray = realm.objects(Diary.self).filter("feelingTag == 5").sorted(byKeyPath: "date")
+            }
         }
     }
-    
-    
-    @IBOutlet weak var tagSearchBar: UISearchBar!
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let SearchResultViewController = self.storyboard?.instantiateViewController(withIdentifier: "searchResult")
-        self.present(SearchResultViewController!, animated: true, completion: nil)}
 }
