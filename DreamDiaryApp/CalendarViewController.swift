@@ -22,6 +22,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     
     
     @IBOutlet weak var backgroundImageView: UIImageView!
+    
     override func viewDidLoad() {
         
         backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
@@ -205,8 +206,6 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
                 view.addSubview(diaryDisplayLabel)
             }
         }
-        
-        
     }
 }
 

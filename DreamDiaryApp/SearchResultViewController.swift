@@ -8,6 +8,11 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     // 1. 遷移先に渡したい値を格納する変数を用意する
     var searchResultArray : Results<Diary>!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        resultTableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,14 +47,14 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     
     // 各セルを選択した時に実行されるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // セルの選択を解除
-        tableView.deselectRow(at: indexPath, animated: true)
+        
         
         // 別の画面に遷移
         performSegue(withIdentifier: "resultDetailSegue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("segue.identifier =", segue.identifier)
         let resultDetailViewController:ResultDetailViewController = segue.destination as! ResultDetailViewController
         
         if segue.identifier == "resultDetailSegue" {
@@ -58,6 +63,8 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         }
         
     }
+    
+    
     
     
     
