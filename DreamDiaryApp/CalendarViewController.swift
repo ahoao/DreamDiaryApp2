@@ -38,8 +38,11 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     @IBOutlet weak var calendar: FSCalendar!
     
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
+        
         
         // 枠を角丸にする
                frameImage.layer.cornerRadius = 20.0
