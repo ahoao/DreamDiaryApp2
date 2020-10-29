@@ -39,6 +39,7 @@
 		076BE925253ADFC6005165F6 /* feeling1after.png in Resources */ = {isa = PBXBuildFile; fileRef = 076BE924253ADFC6005165F6 /* feeling1after.png */; };
 		076BE92D25415B03005165F6 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076BE92C25415B03005165F6 /* SearchResultViewController.swift */; };
 		076BE92F2547271E005165F6 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076BE92E2547271E005165F6 /* ResultDetailViewController.swift */; };
+		076BE937254A96BB005165F6 /* Square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 076BE936254A96BA005165F6 /* Square.jpg */; };
 		076DA3AD251339ED000F4867 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076DA3AC251339ED000F4867 /* CalendarViewController.swift */; };
 		07E1A9FB25187645002D9A40 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E1A9FA25187645002D9A40 /* ShareViewController.swift */; };
 		2C686DF4EEA81505350CE5B3 /* Pods_DreamDiaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */; };
@@ -79,6 +80,7 @@
 		076BE924253ADFC6005165F6 /* feeling1after.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feeling1after.png; sourceTree = "<group>"; };
 		076BE92C25415B03005165F6 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		076BE92E2547271E005165F6 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
+		076BE936254A96BA005165F6 /* Square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Square.jpg; sourceTree = "<group>"; };
 		076DA3AC251339ED000F4867 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		07E1A9FA25187645002D9A40 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				0745BE112523014600C42B60 /* SettingViewController.swift */,
 				0769E982250F478400CD6C47 /* Main.storyboard */,
 				0769E985250F478600CD6C47 /* Assets.xcassets */,
+				076BE936254A96BA005165F6 /* Square.jpg */,
 				076BE8EA253418D0005165F6 /* background.png */,
 				076BE8E8253418D0005165F6 /* backgroundmoon.png */,
 				076BE8E9253418D0005165F6 /* backgroundstar.png */,
@@ -235,6 +238,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				076BE937254A96BB005165F6 /* Square.jpg in Resources */,
 				076BE8F725341B0B005165F6 /* feeling1before.png in Resources */,
 				076BE8ED253418D0005165F6 /* background.png in Resources */,
 				076BE8F525341B0B005165F6 /* feeling4before.png in Resources */,

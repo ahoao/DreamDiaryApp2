@@ -14,11 +14,15 @@ let h = UIScreen.main.bounds.size.height
 class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance {
     
     @IBOutlet weak var dateDisplayLabel: UILabel!
-    
     @IBOutlet weak var tagDisplayLabel: UILabel!
     @IBOutlet weak var diaryDisplayLabel: UILabel!
+   
+    
     @IBOutlet weak var feelingDisplayImage: UIImageView!
     @IBOutlet weak var favDisplayImage: UIImageView!
+    
+    
+    @IBOutlet weak var frameImage: UIImageView!
     
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -36,6 +40,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
+        
+        // 枠を角丸にする
+               frameImage.layer.cornerRadius = 20.0
+               frameImage.layer.masksToBounds = true
         
         let startOrigin = CGPoint.zero
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
