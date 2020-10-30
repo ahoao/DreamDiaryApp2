@@ -532,6 +532,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
 
         // タグの削除ボタンを有効に
         tagListView.enableRemoveButton = true
+        
+        
 
         // 今回は削除ボタン押された時の処理を行う
         tagListView.delegate = self
@@ -590,6 +592,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         textField.frame = CGRect(x: MARGIN, y: tagListView.frame.origin.y + tagListView.frame.height + 5, width: view.frame.width-MARGIN*2, height: 40)
     }
 }
+
 
 
 

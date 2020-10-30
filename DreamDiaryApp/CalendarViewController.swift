@@ -2,6 +2,7 @@ import UIKit
 import FSCalendar
 import CalculateCalendarLogic
 import RealmSwift
+import TagListView
 
 
 
@@ -11,10 +12,15 @@ import RealmSwift
 let w = UIScreen.main.bounds.size.width
 let h = UIScreen.main.bounds.size.height
 
-class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance {
+class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance, TagListViewDelegate {
+    
+    let tagListView = TagListView()
+    let MARGIN: CGFloat = 10
     
     @IBOutlet weak var dateDisplayLabel: UILabel!
-    @IBOutlet weak var tagDisplayLabel: UILabel!
+    
+    @IBOutlet weak var tagDisplayListView: TagListView!
+    
     
     @IBOutlet weak var diaryDisplayTextView: UITextView!
     
@@ -73,11 +79,11 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         view.addSubview(dateDisplayLabel)
         
         //「タグ」表示設定
-        tagDisplayLabel.text = ""
-        tagDisplayLabel.textAlignment = .center
-        tagDisplayLabel.textColor = .white
-        tagDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
-        view.addSubview(tagDisplayLabel)
+//        tagDisplayLabel.text = ""
+//        tagDisplayLabel.textAlignment = .center
+//        tagDisplayLabel.textColor = .white
+//        tagDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
+//        view.addSubview(tagDisplayLabel)
         
         //スケジュール内容表示設定
         diaryDisplayTextView.text = ""
@@ -196,7 +202,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         dateDisplayLabel.text = "\(year)/\(m)/\(d)"
         //        view.addSubview(Date)
         
-        tagDisplayLabel.text = ""
+//        tagDisplayLabel.text = ""
         feelingDisplayImage.image = nil
         favDisplayImage.image = nil
         
@@ -211,7 +217,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
             if resultData.date == da {
                 dateDisplayLabel.text = resultData.date
                 diaryDisplayTextView.text = resultData.content
-                tagDisplayLabel.text = resultData.tag
+                tagListView.addTag(resultData.tag)
                 displayImage(displayImageNo: resultData.feelingTag)
                 favImage(favImage: resultData.favoriteDream)
                 print("diaryDisplayTextView.text =", diaryDisplayTextView.text)
@@ -219,6 +225,36 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
             }
         }
     }
+    
+    func setView() {
+
+        view.addSubview(tagListView)
+        
+
+        tagListView.frame = CGRect(x: MARGIN, y: 50, width: view.frame.width-MARGIN*2, height: 0)
+
+        // タグの削除ボタンを有効に
+        tagListView.enableRemoveButton = true
+        // 今回は削除ボタン押された時の処理を行う
+        tagListView.delegate = self
+
+        // タグの見た目を設定
+        tagListView.alignment = .left
+        tagListView.cornerRadius = 3
+        tagListView.textColor = UIColor.black
+        tagListView.borderColor = UIColor.lightGray
+        tagListView.borderWidth = 1
+        tagListView.paddingX = 10
+        tagListView.paddingY = 5
+        tagListView.textFont = UIFont.systemFont(ofSize: 16)
+        tagListView.tagBackgroundColor = UIColor.white
+
+        // タグ削除ボタンの見た目を設定
+        tagListView.removeButtonIconSize = 10
+        tagListView.removeIconLineColor = UIColor.black
+
+    }
+    
 }
 
 
