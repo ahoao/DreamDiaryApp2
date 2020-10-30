@@ -295,15 +295,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDa-CA-hb0">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-g5-bJI">
                                 <rect key="frame" x="20" y="573" width="374" height="220"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="oLM-jY-i0c"/>
+                                    <constraint firstAttribute="height" constant="220" id="COx-yy-odq"/>
                                 </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BmK-vA-9zg">
                                 <rect key="frame" x="197" y="483" width="80" height="80"/>
                                 <constraints>
@@ -319,7 +321,10 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6lG-5i-WOa">
-                                <rect key="frame" x="20" y="531" width="177" height="42"/>
+                                <rect key="frame" x="20" y="518" width="177" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EkG-am-MPk"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -329,27 +334,25 @@
                         <constraints>
                             <constraint firstItem="yeR-BB-g6a" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" constant="20" id="0DG-UD-62O"/>
                             <constraint firstItem="BmK-vA-9zg" firstAttribute="leading" secondItem="6lG-5i-WOa" secondAttribute="trailing" id="2r2-yH-c0y"/>
-                            <constraint firstItem="MDa-CA-hb0" firstAttribute="top" secondItem="ZMF-6Y-AgU" secondAttribute="bottom" constant="10" id="5yc-X4-DyQ"/>
                             <constraint firstItem="8xH-qn-fHj" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" constant="10" id="7y1-Ko-deQ"/>
-                            <constraint firstItem="2fA-If-5gy" firstAttribute="bottom" secondItem="MDa-CA-hb0" secondAttribute="bottom" constant="20" id="Cnm-HN-fva"/>
+                            <constraint firstItem="E0m-g5-bJI" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" constant="20" id="9n1-TH-PCw"/>
                             <constraint firstItem="Qzv-BT-YGR" firstAttribute="top" secondItem="2fA-If-5gy" secondAttribute="top" constant="10" id="DcT-W8-GdB"/>
-                            <constraint firstItem="6lG-5i-WOa" firstAttribute="top" secondItem="yeR-BB-g6a" secondAttribute="bottom" constant="23" id="FJe-GP-S0v"/>
+                            <constraint firstItem="6lG-5i-WOa" firstAttribute="top" secondItem="yeR-BB-g6a" secondAttribute="bottom" constant="10" id="FJe-GP-S0v"/>
                             <constraint firstItem="BmK-vA-9zg" firstAttribute="top" secondItem="Qzv-BT-YGR" secondAttribute="bottom" constant="29" id="KUx-Z6-fO7"/>
                             <constraint firstItem="Qzv-BT-YGR" firstAttribute="trailing" secondItem="2fA-If-5gy" secondAttribute="trailing" id="LUU-CC-OQW"/>
-                            <constraint firstItem="MDa-CA-hb0" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" constant="20" id="N3F-7E-M34"/>
                             <constraint firstItem="2fA-If-5gy" firstAttribute="trailing" secondItem="8xH-qn-fHj" secondAttribute="trailing" constant="10" id="Q3x-Za-Pi7"/>
                             <constraint firstItem="Qzv-BT-YGR" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" id="Q6M-ek-uRJ"/>
+                            <constraint firstItem="2fA-If-5gy" firstAttribute="trailing" secondItem="E0m-g5-bJI" secondAttribute="trailing" constant="20" id="Thq-Xr-XNU"/>
                             <constraint firstItem="8xH-qn-fHj" firstAttribute="top" secondItem="Qzv-BT-YGR" secondAttribute="bottom" constant="10" id="U2M-ld-my1"/>
                             <constraint firstItem="ZMF-6Y-AgU" firstAttribute="top" secondItem="Qzv-BT-YGR" secondAttribute="bottom" constant="29" id="ZMI-Ie-aws"/>
                             <constraint firstItem="2fA-If-5gy" firstAttribute="trailing" secondItem="ZMF-6Y-AgU" secondAttribute="trailing" constant="20" id="ZZQ-PB-a3Y"/>
                             <constraint firstItem="ZMF-6Y-AgU" firstAttribute="top" secondItem="BmK-vA-9zg" secondAttribute="top" id="eKi-8S-kDc"/>
-                            <constraint firstItem="MDa-CA-hb0" firstAttribute="top" secondItem="6lG-5i-WOa" secondAttribute="bottom" id="gQt-2E-enV"/>
                             <constraint firstItem="2fA-If-5gy" firstAttribute="bottom" secondItem="8xH-qn-fHj" secondAttribute="bottom" constant="10" id="kX0-Cu-zIE"/>
                             <constraint firstItem="6lG-5i-WOa" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" constant="20" id="mZM-1R-6bd"/>
                             <constraint firstItem="BmK-vA-9zg" firstAttribute="leading" secondItem="yeR-BB-g6a" secondAttribute="trailing" constant="10" id="qf0-Mf-CXV"/>
                             <constraint firstItem="yeR-BB-g6a" firstAttribute="top" secondItem="Qzv-BT-YGR" secondAttribute="bottom" constant="24" id="ric-zr-iIa"/>
-                            <constraint firstItem="MDa-CA-hb0" firstAttribute="top" secondItem="BmK-vA-9zg" secondAttribute="bottom" constant="10" id="uXs-m7-hdN"/>
-                            <constraint firstItem="2fA-If-5gy" firstAttribute="trailing" secondItem="MDa-CA-hb0" secondAttribute="trailing" constant="20" id="yER-HC-Atr"/>
+                            <constraint firstItem="2fA-If-5gy" firstAttribute="bottom" secondItem="E0m-g5-bJI" secondAttribute="bottom" constant="20" id="srz-Nv-uQ0"/>
+                            <constraint firstItem="E0m-g5-bJI" firstAttribute="top" secondItem="6lG-5i-WOa" secondAttribute="bottom" constant="5" id="y5U-3U-qgX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2fA-If-5gy"/>
                     </view>
@@ -359,7 +362,7 @@
                         <outlet property="backgroundImageView" destination="y1p-Ke-4ft" id="q2N-zY-wKV"/>
                         <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
                         <outlet property="dateDisplayLabel" destination="yeR-BB-g6a" id="NBY-zV-WxD"/>
-                        <outlet property="diaryDisplayLabel" destination="MDa-CA-hb0" id="Yie-gu-kGe"/>
+                        <outlet property="diaryDisplayTextView" destination="E0m-g5-bJI" id="6Gr-gx-5Ij"/>
                         <outlet property="favDisplayImage" destination="ZMF-6Y-AgU" id="l1y-fN-VaO"/>
                         <outlet property="feelingDisplayImage" destination="BmK-vA-9zg" id="mPF-JT-alt"/>
                         <outlet property="frameImage" destination="8xH-qn-fHj" id="Y5f-oc-jnf"/>
@@ -551,6 +554,12 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
+                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>

@@ -15,8 +15,9 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     
     @IBOutlet weak var dateDisplayLabel: UILabel!
     @IBOutlet weak var tagDisplayLabel: UILabel!
-    @IBOutlet weak var diaryDisplayLabel: UILabel!
-   
+    
+    @IBOutlet weak var diaryDisplayTextView: UITextView!
+    
     
     @IBOutlet weak var feelingDisplayImage: UIImageView!
     @IBOutlet weak var favDisplayImage: UIImageView!
@@ -79,10 +80,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         view.addSubview(tagDisplayLabel)
         
         //スケジュール内容表示設定
-        diaryDisplayLabel.text = ""
-        diaryDisplayLabel.font = UIFont.systemFont(ofSize: 18.0)
-        diaryDisplayLabel.textColor = .white
-        view.addSubview(diaryDisplayLabel)
+        diaryDisplayTextView.text = ""
+        diaryDisplayTextView.font = UIFont.systemFont(ofSize: 18.0)
+        diaryDisplayTextView.textColor = .white
+        view.addSubview(diaryDisplayTextView)
     
         //        feelingbutton表示設定
         let selectedImage = UIImage(named: "icon")
@@ -178,8 +179,8 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         //予定がある場合、スケジュールをDBから取得・表示する。
         //無い場合、「スケジュールはありません」と表示。
-        diaryDisplayLabel.text = "スケジュールはありません"
-        diaryDisplayLabel.textColor = .lightGray
+        diaryDisplayTextView.text = "スケジュールはありません"
+        diaryDisplayTextView.textColor = .lightGray
         //        view.addSubview(labelData)
         
         let tmpDate = Calendar(identifier: .gregorian)
@@ -209,12 +210,12 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         for resultData in result {
             if resultData.date == da {
                 dateDisplayLabel.text = resultData.date
-                diaryDisplayLabel.text = resultData.content
+                diaryDisplayTextView.text = resultData.content
                 tagDisplayLabel.text = resultData.tag
                 displayImage(displayImageNo: resultData.feelingTag)
                 favImage(favImage: resultData.favoriteDream)
-                print("diaryDisplayLabel.text =", diaryDisplayLabel.text)
-                view.addSubview(diaryDisplayLabel)
+                print("diaryDisplayTextView.text =", diaryDisplayTextView.text)
+                view.addSubview(diaryDisplayTextView)
             }
         }
     }
