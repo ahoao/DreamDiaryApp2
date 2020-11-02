@@ -14,7 +14,6 @@ let h = UIScreen.main.bounds.size.height
 
 class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance, TagListViewDelegate {
     
-    let tagListView = TagListView()
     let MARGIN: CGFloat = 10
     
     @IBOutlet weak var dateDisplayLabel: UILabel!
@@ -217,7 +216,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
             if resultData.date == da {
                 dateDisplayLabel.text = resultData.date
                 diaryDisplayTextView.text = resultData.content
-                tagListView.addTag(resultData.tag)
+                tagDisplayListView.addTag(resultData.tag)
                 displayImage(displayImageNo: resultData.feelingTag)
                 favImage(favImage: resultData.favoriteDream)
                 print("diaryDisplayTextView.text =", diaryDisplayTextView.text)
@@ -226,34 +225,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         }
     }
     
-    func setView() {
 
-        view.addSubview(tagListView)
-        
-
-        tagListView.frame = CGRect(x: MARGIN, y: 50, width: view.frame.width-MARGIN*2, height: 0)
-
-        // タグの削除ボタンを有効に
-        tagListView.enableRemoveButton = true
-        // 今回は削除ボタン押された時の処理を行う
-        tagListView.delegate = self
-
-        // タグの見た目を設定
-        tagListView.alignment = .left
-        tagListView.cornerRadius = 3
-        tagListView.textColor = UIColor.black
-        tagListView.borderColor = UIColor.lightGray
-        tagListView.borderWidth = 1
-        tagListView.paddingX = 10
-        tagListView.paddingY = 5
-        tagListView.textFont = UIFont.systemFont(ofSize: 16)
-        tagListView.tagBackgroundColor = UIColor.white
-
-        // タグ削除ボタンの見た目を設定
-        tagListView.removeButtonIconSize = 10
-        tagListView.removeIconLineColor = UIColor.black
-
-    }
     
 }
 
