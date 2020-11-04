@@ -17,3 +17,7 @@ class Diary: Object {
          return "content"
     }
 }
+
+class TaskList: Object {
+    let list = List<Diary>()
+}

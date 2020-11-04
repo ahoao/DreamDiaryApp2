@@ -51,8 +51,8 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         
         // 枠を角丸にする
-               frameImage.layer.cornerRadius = 20.0
-               frameImage.layer.masksToBounds = true
+        frameImage.layer.cornerRadius = 20.0
+        frameImage.layer.masksToBounds = true
         
         let startOrigin = CGPoint.zero
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
@@ -78,18 +78,18 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         view.addSubview(dateDisplayLabel)
         
         //「タグ」表示設定
-//        tagDisplayLabel.text = ""
-//        tagDisplayLabel.textAlignment = .center
-//        tagDisplayLabel.textColor = .white
-//        tagDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
-//        view.addSubview(tagDisplayLabel)
+        //        tagDisplayLabel.text = ""
+        //        tagDisplayLabel.textAlignment = .center
+        //        tagDisplayLabel.textColor = .white
+        //        tagDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
+        //        view.addSubview(tagDisplayLabel)
         
         //スケジュール内容表示設定
         diaryDisplayTextView.text = ""
         diaryDisplayTextView.font = UIFont.systemFont(ofSize: 18.0)
         diaryDisplayTextView.textColor = .white
         view.addSubview(diaryDisplayTextView)
-    
+        
         //        feelingbutton表示設定
         let selectedImage = UIImage(named: "icon")
         feelingDisplayImage.image = selectedImage
@@ -118,7 +118,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
             return
         }
         let selectedImage = UIImage(named: "favAfter")
-       
+        
         // Image Viewに読み込んだ画像をセット
         favDisplayImage.image = selectedImage
     }
@@ -201,7 +201,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         dateDisplayLabel.text = "\(year)/\(m)/\(d)"
         //        view.addSubview(Date)
         
-//        tagDisplayLabel.text = ""
+       tagDisplayListView.removeAllTags()
         feelingDisplayImage.image = nil
         favDisplayImage.image = nil
         
@@ -225,7 +225,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         }
     }
     
-
+    
     
 }
 
