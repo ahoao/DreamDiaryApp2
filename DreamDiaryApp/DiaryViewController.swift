@@ -23,6 +23,9 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     override func viewDidLoad() {
         backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
+   
+    
+    
     }
     
     @IBOutlet weak var diaryTextView: UITextView!
@@ -448,6 +451,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func diarySave(_ sender: Any) {
         let realm = try! Realm()
         
+         performSegue(withIdentifier: "toTweet", sender: nil)
+        
         let selectedDate = datePicker.date
         print("datePickerの中身\(selectedDate)")
         
@@ -470,9 +475,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         print("データ書き込み完了")
         
         //        前のページに戻る
-        dismiss(animated: true, completion: nil)
-        
-        
+//        dismiss(animated: true, completion: nil)
     }
     
     
