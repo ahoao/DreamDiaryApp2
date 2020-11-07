@@ -10,8 +10,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     var feelingButtonTag = Int()
     var faveriteDream = 0
     var tag: String = ""
-   
-
+    
+    
     
     let MARGIN: CGFloat = 10
     
@@ -456,11 +456,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let stringDate = dateFormatter.string(from: selectedDate)
         print("datePickerの中身\(selectedDate)")
         
-        let task = Diary()
-           task.tag = "..."
-
-           let taskList = TaskList()
-           taskList.list.append(task)
         
         try! realm.write {
             //日付表示の内容とスケジュール入力の内容が書き込まれる。
@@ -577,7 +572,10 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             displayTagView.addTags([tagTextField.text!])
             
             // テキストフィールドをクリアしてレイアウト調整
-            tag += textField.text!
+             if tag.count > 0 {
+                           tag += ":"
+                       }
+                       tag += textField.text!
             
             textField.text = nil
             updateLayout()

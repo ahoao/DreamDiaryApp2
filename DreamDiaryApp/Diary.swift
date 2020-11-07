@@ -14,10 +14,7 @@ class Diary: Object {
     @objc dynamic var favoriteDream:Bool = false
     
     open var primaryKey: String {
-         return "content"
+        return "content"
     }
 }
 
-class TaskList: Object {
-    let list = List<Diary>()
-}

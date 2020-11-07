@@ -201,7 +201,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         dateDisplayLabel.text = "\(year)/\(m)/\(d)"
         //        view.addSubview(Date)
         
-       tagDisplayListView.removeAllTags()
+        tagDisplayListView.removeAllTags()
         feelingDisplayImage.image = nil
         favDisplayImage.image = nil
         
@@ -214,9 +214,14 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         print("result =", result)
         for resultData in result {
             if resultData.date == da {
+                var tag = resultData.tag
+                if tag.count > 0 {
+                    var tags = tag.components(separatedBy: ":")
+                    
+                    tagDisplayListView.addTags(tags)
+                }
                 dateDisplayLabel.text = resultData.date
                 diaryDisplayTextView.text = resultData.content
-                tagDisplayListView.addTag(resultData.tag)
                 displayImage(displayImageNo: resultData.feelingTag)
                 favImage(favImage: resultData.favoriteDream)
                 print("diaryDisplayTextView.text =", diaryDisplayTextView.text)

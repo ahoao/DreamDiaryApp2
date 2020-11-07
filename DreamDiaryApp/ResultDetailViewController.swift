@@ -1,5 +1,6 @@
 import UIKit
 import RealmSwift
+import TagListView
 
 class ResultDetailViewController: UIViewController {
     
@@ -11,7 +12,12 @@ class ResultDetailViewController: UIViewController {
     
     @IBOutlet weak var dreamDateLabel: UILabel!
     @IBOutlet weak var dreamcontentLabel: UILabel!
-    @IBOutlet weak var dreamTagLabel: UILabel!
+    
+    @IBOutlet weak var dreamContentTextView: UITextView!
+    @IBOutlet weak var dreamContentView: UIView!
+    
+    @IBOutlet weak var dreamTagListView: TagListView!
+    @IBOutlet weak var dreamTagFrameView: UIView!
     
     
     @IBOutlet weak var dreamFeelingTagImage: UIImageView!
@@ -40,44 +46,44 @@ class ResultDetailViewController: UIViewController {
         
         
         // 枠のカラー
-        dreamcontentLabel.layer.borderColor = UIColor.white.cgColor
+        dreamContentView.layer.borderColor = UIColor.white.cgColor
         
         // 枠の幅
-        dreamcontentLabel.layer.borderWidth = 2.0
+        dreamContentView.layer.borderWidth = 2.0
         
         // 枠を角丸にする
-        dreamcontentLabel.layer.cornerRadius = 20.0
-        dreamcontentLabel.layer.masksToBounds = true
+        dreamContentView.layer.cornerRadius = 20.0
+        dreamContentView.layer.masksToBounds = true
         
         // 枠のカラー
-        dreamcontentLabel.layer.borderColor = UIColor.white.cgColor
+        dreamContentView.layer.borderColor = UIColor.white.cgColor
         
         // 枠の幅
-        dreamcontentLabel.layer.borderWidth = 2.0
+        dreamContentView.layer.borderWidth = 2.0
         
         // 枠を角丸にする
-        dreamcontentLabel.layer.cornerRadius = 20.0
-        dreamcontentLabel.layer.masksToBounds = true
+        dreamContentView.layer.cornerRadius = 20.0
+        dreamContentView.layer.masksToBounds = true
         
         // 枠のカラー
-        dreamTagLabel.layer.borderColor = UIColor.white.cgColor
+        dreamTagFrameView.layer.borderColor = UIColor.white.cgColor
         
         // 枠の幅
-        dreamTagLabel.layer.borderWidth = 2.0
+        dreamTagFrameView.layer.borderWidth = 2.0
         
         // 枠を角丸にする
-        dreamTagLabel.layer.cornerRadius = 20.0
-        dreamTagLabel.layer.masksToBounds = true
+        dreamTagFrameView.layer.cornerRadius = 20.0
+        dreamTagFrameView.layer.masksToBounds = true
         
         // 枠のカラー
-        dreamTagLabel.layer.borderColor = UIColor.white.cgColor
+        dreamTagFrameView.layer.borderColor = UIColor.white.cgColor
         
         // 枠の幅
-        dreamTagLabel.layer.borderWidth = 2.0
+        dreamTagFrameView.layer.borderWidth = 2.0
         
         // 枠を角丸にする
-        dreamTagLabel.layer.cornerRadius = 20.0
-        dreamTagLabel.layer.masksToBounds = true
+        dreamTagFrameView.layer.cornerRadius = 20.0
+        dreamTagFrameView.layer.masksToBounds = true
         
     }
     
@@ -100,10 +106,16 @@ class ResultDetailViewController: UIViewController {
         favoriteDreamImage.image = selectedImage
     }
     
+    
     func detail(){
         dreamDateLabel.text = diary.date
-        dreamcontentLabel.text = diary.content
-        dreamTagLabel.text = diary.tag
+        dreamContentTextView.text = diary.content
+        
+        var tag = diary.tag
+        if tag.count > 0 {
+            var tags = tag.components(separatedBy: ":")
+            dreamTagListView.addTags(tags)
+        }
         displayImage(displayImageNo: diary.feelingTag)
         favImage(favImage: diary.favoriteDream)
     }

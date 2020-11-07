@@ -22,10 +22,10 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.layer.backgroundColor = UIColor.clear.cgColor
         cell.textLabel?.textColor = UIColor.white
         return cell
-    
+        
     }
     
-            
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
@@ -35,15 +35,15 @@ class SettingViewController: UIViewController, UITableViewDelegate, UITableViewD
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
         self.backgroundImageView.frame.origin = startOrigin
         UIView.animate(withDuration: 12.0,
-              delay: 0.0,
-              options: [.repeat, .curveLinear],
-              animations:{ self.backgroundImageView.frame.origin = endOrigin },
-              completion: nil)
+                       delay: 0.0,
+                       options: [.repeat, .curveLinear],
+                       animations:{ self.backgroundImageView.frame.origin = endOrigin },
+                       completion: nil)
         
     }
     
-
-
+    
+    
 }
 
 

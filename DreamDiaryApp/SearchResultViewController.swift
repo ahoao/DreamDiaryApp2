@@ -4,6 +4,9 @@ import RealmSwift
 class SearchResultViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     @IBOutlet weak var resultTableView: UITableView!
+      
+        
+      
     
     let realm = try! Realm()
     // 1. 遷移先に渡したい値を格納する変数を用意する
@@ -19,11 +22,22 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         resultTableView.delegate = self
         resultTableView.dataSource = self
         
-  
-
+        // make UIImageView instance
+        var imageView = UIImageView()
+           // read image
+           let image = UIImage(named: "background")
+           // set image to ImageView
+           imageView.image = image
+           // set alpha value of imageView
+           imageView.alpha = 0.5
+           // set imageView to backgroundView of TableView
+           self.resultTableView.backgroundView = imageView
+        
+        
     }
     
     // データの数（＝セルの数）を返すメソッド
@@ -46,6 +60,11 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
         
         cell.detailTextLabel?.text = result.date
         
+        // cellの背景を透過
+        cell.backgroundColor = UIColor.clear
+        // cell内のcontentViewの背景を透過
+        cell.contentView.backgroundColor = UIColor.clear
+        
         return cell
         
     }
@@ -67,34 +86,5 @@ class SearchResultViewController: UIViewController, UITableViewDelegate, UITable
             resultDetailViewController.diary = searchResultArray[indexPath!.row]
         }
         
-    }
-    
-}
-
-class FooTableView: UITableViewController {
-  override func viewDidLoad() {
-
-    // make UIImageView instance
-    let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: self.tableView.frame.height))
-    // read image
-    let image = UIImage(named: "background.png")
-    // set image to ImageView
-    imageView.image = image
-    // set alpha value of imageView
-    imageView.alpha = 0.5
-    // set imageView to backgroundView of TableView
-    self.tableView.backgroundView = imageView
-
-  }
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath as IndexPath) 
-
-      // cellの背景を透過
-        cell.backgroundColor = UIColor.clear
-      // cell内のcontentViewの背景を透過
-        cell.contentView.backgroundColor = UIColor.clear
-
-      return cell
     }
 }

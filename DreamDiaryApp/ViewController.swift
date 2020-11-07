@@ -8,7 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     
     
-
+    
     
     
     @IBOutlet weak var touchDiaryButton: UIButton!
@@ -22,8 +22,8 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         
-
-
+        
+        
         
         // 枠のカラー
         touchDiaryButton.layer.borderColor = UIColor.white.cgColor
