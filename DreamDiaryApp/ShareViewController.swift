@@ -1,7 +1,12 @@
 import UIKit
 import RealmSwift
+import FSCalendar
+import CalculateCalendarLogic
 
 class ShareViewController: UIViewController {
+    
+    // 1. 遷移先に渡したい値を格納する変数を用意する
+    var dateResult : Date?
     
     
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -30,23 +35,23 @@ class ShareViewController: UIViewController {
                        completion: nil)
     }
     
-    @IBAction func tweetbutton(_ sender: Any) {
+    @IBAction func tweetButton(_ sender: Any) {
         
         let realm = try! Realm()
         var result = realm.objects(Diary.self)
+        result = result.filter()
         for resultData in result {
             let text = resultData.content + "　今日こんな夢を見たよ！＠夢日記"
-        //twitterに投稿したい文章をtextに入れる
-//               let text = "twitter用メッセージ"
-        
-               //.urlQueryAllowed : URLクエリ内で使用できる文字列で返却する
-               guard let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
-        
-               guard let twitterURL = URL(string: "https://twitter.com/intent/tweet?text=\(encodedText)") else {return}
-        
-               UIApplication.shared.open(twitterURL, options:[:], completionHandler: nil)
+            //twitterに投稿したい文章をtextに入れる
+            //               let text = "twitter用メッセージ"
+            
+            //.urlQueryAllowed : URLクエリ内で使用できる文字列で返却する
+            guard let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {return}
+            
+            guard let twitterURL = URL(string: "https://twitter.com/intent/tweet?text=\(encodedText)") else {return}
+            
+            UIApplication.shared.open(twitterURL, options:[:], completionHandler: nil)
+            
+        }
     }
-    
-    
-}
 }

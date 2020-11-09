@@ -92,6 +92,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="rgP-ox-vKb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="気持ちやよく見る夢で探す" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqK-5j-Qca">
                                 <rect key="frame" x="75" y="129" width="264" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -153,17 +157,6 @@
                                     <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel6ViewController" id="Rcs-qk-AFP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWB-jy-q5W">
-                                <rect key="frame" x="177" y="353" width="60" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="JRv-Mg-Et8"/>
-                                    <constraint firstAttribute="height" constant="64" id="doH-sQ-qUB"/>
-                                </constraints>
-                                <state key="normal" image="favAfter.png"/>
-                                <connections>
-                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFavViewController" id="B6Y-fs-qIg"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asZ-pv-LuV">
                                 <rect key="frame" x="177" y="193" width="60" height="60"/>
                                 <constraints>
@@ -173,6 +166,17 @@
                                 <state key="normal" title="Button" image="feeling1after.png"/>
                                 <connections>
                                     <segue destination="5mW-iQ-WBf" kind="show" identifier="toFeel1ViewController" id="KYt-eu-T0m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWB-jy-q5W">
+                                <rect key="frame" x="177" y="353" width="60" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="JRv-Mg-Et8"/>
+                                    <constraint firstAttribute="height" constant="64" id="doH-sQ-qUB"/>
+                                </constraints>
+                                <state key="normal" image="favAfter.png"/>
+                                <connections>
+                                    <segue destination="5mW-iQ-WBf" kind="show" identifier="toFavViewController" id="B6Y-fs-qIg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,6 +204,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="VRI-49-wjf"/>
                     <connections>
+                        <outlet property="background2ImageView" destination="rgP-ox-vKb" id="sXN-C3-qK7"/>
                         <outlet property="backgroundImageView" destination="NJh-Y2-h7J" id="h4f-LN-TGh"/>
                         <outlet property="searchFavButton" destination="YWB-jy-q5W" id="lZY-lh-xTX"/>
                         <outlet property="searchFeeling1Button" destination="asZ-pv-LuV" id="zTq-Ja-FN3"/>
@@ -279,6 +284,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" id="y1p-Ke-4ft">
                                 <rect key="frame" x="0.0" y="-7" width="414" height="910"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bj7-sh-z4T">
+                                <rect key="frame" x="0.0" y="-7" width="414" height="903"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-qn-fHj">
@@ -408,6 +417,7 @@
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="2af-Jv-2Pb"/>
                     <navigationItem key="navigationItem" id="2fc-pr-Bob"/>
                     <connections>
+                        <outlet property="background2ImageView" destination="Bj7-sh-z4T" id="xYq-cS-frZ"/>
                         <outlet property="backgroundImageView" destination="y1p-Ke-4ft" id="q2N-zY-wKV"/>
                         <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
                         <outlet property="dateDisplayLabel" destination="yeR-BB-g6a" id="NBY-zV-WxD"/>
@@ -944,7 +954,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Tweetする"/>
                                 <connections>
-                                    <action selector="tweetbutton:" destination="Rap-X2-taf" eventType="touchUpInside" id="LL5-3t-Gey"/>
+                                    <action selector="tweetButton:" destination="Rap-X2-taf" eventType="touchUpInside" id="gwE-3d-5wi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKw-tA-MCB">

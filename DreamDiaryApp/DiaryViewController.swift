@@ -447,6 +447,17 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     var diary: Diary! // 受け皿の用意
     
+    // segueが動作することをViewControllerに通知するメソッド
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // segueのIDを確認して特定のsegueのときのみ動作させる
+        if segue.identifier == "toTweet" {
+            // 2. 遷移先のViewControllerを取得
+            let next = segue.destination as? ShareViewController
+            // 3. １で用意した遷移先の変数に値を渡す
+            next?.dateResult = selectedDate.
+        }
+    }
     
     @IBAction func diarySave(_ sender: Any) {
         let realm = try! Realm()
@@ -474,14 +485,16 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         
         print("データ書き込み完了")
         
+        // 4. 画面遷移実行
+        performSegue(withIdentifier: "ShareViewController", sender: nil)
         //        前のページに戻る
 //        dismiss(animated: true, completion: nil)
     }
     
     
-    @IBAction func touchSaveButton(_ sender: UIButton) {let vc = ShareViewController()
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    @IBAction func touchSaveButton(_ sender: UIButton) {let vc = ShareViewController()
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
     
     // DB内のタスクが格納されるリスト。
     // 以降内容をアップデートするとリスト内は自動的に更新される。
