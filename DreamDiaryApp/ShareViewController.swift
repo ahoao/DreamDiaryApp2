@@ -6,12 +6,15 @@ import CalculateCalendarLogic
 class ShareViewController: UIViewController {
     
     // 1. 遷移先に渡したい値を格納する変数を用意する
-    var dateResult : Date?
-    
+    var dateResult : String = ""
     
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var background2ImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
-        backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
+        backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
+        background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
     }
     
     
@@ -33,13 +36,24 @@ class ShareViewController: UIViewController {
                        options: [.repeat, .curveLinear],
                        animations:{ self.backgroundImageView.frame.origin = endOrigin },
                        completion: nil)
+        
+        let startOrigin2 = CGPoint(x: view.frame.width, y: 0.0)
+        let endOrigin2 = CGPoint.zero
+        self.background2ImageView.frame.origin = startOrigin2
+        UIView.animate(withDuration: 12.0,
+                       delay: 0.0,
+                       options: [.repeat, .curveLinear],
+                       animations:{ self.background2ImageView.frame.origin = endOrigin2 },
+                       completion: nil)
     }
     
     @IBAction func tweetButton(_ sender: Any) {
         
+        print("tweetボタンが押された")
         let realm = try! Realm()
         var result = realm.objects(Diary.self)
-        result = result.filter()
+        print("\(dateResult)")
+        result = result.filter("date = '\(dateResult)'")
         for resultData in result {
             let text = resultData.content + "　今日こんな夢を見たよ！＠夢日記"
             //twitterに投稿したい文章をtextに入れる

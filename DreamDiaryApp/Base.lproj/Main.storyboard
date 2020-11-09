@@ -231,6 +231,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="MGR-Ay-gp0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EhT-ph-lTA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -266,13 +270,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="ellipsis.circle.fill" catalog="system" id="3IV-hC-0z1"/>
                     <connections>
+                        <outlet property="background2ImageView" destination="MGR-Ay-gp0" id="4bN-j1-nWc"/>
                         <outlet property="backgroundImageView" destination="XOT-NO-NOR" id="6eZ-2y-Laq"/>
                         <outlet property="settingTableView" destination="EhT-ph-lTA" id="EP2-bt-iIR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fco-0w-ooW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2977" y="121"/>
+            <point key="canvasLocation" x="2976.811594202899" y="120.53571428571428"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="vLu-Hh-H23">
@@ -324,6 +329,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="subtitleDefaultColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -478,6 +486,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="w8A-aK-h04">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="4TT-sZ-M5j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="どんな気持ち？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-xc-cty">
@@ -717,6 +729,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KSN-HK-b7f"/>
                     <connections>
+                        <outlet property="background2ImageView" destination="4TT-sZ-M5j" id="2QP-I4-xo8"/>
                         <outlet property="backgroundImageView" destination="w8A-aK-h04" id="NoF-HH-PQj"/>
                         <outlet property="datePicker" destination="NPt-Qk-4lE" id="eEQ-9y-ThH"/>
                         <outlet property="diaryTextView" destination="PGR-6d-0YX" id="98X-jL-6Ll"/>
@@ -735,7 +748,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuq-4H-thH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wZi-J2-A1c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="954" y="990"/>
+            <point key="canvasLocation" x="953.62318840579712" y="989.73214285714278"/>
         </scene>
         <!--Search Result View Controller-->
         <scene sceneID="RTB-TA-Ojx">
@@ -810,6 +823,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="af0-Qc-xgT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="uV6-c5-QLV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -922,6 +939,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="j7D-X0-gIs"/>
                     <connections>
+                        <outlet property="background2ImageView" destination="uV6-c5-QLV" id="0LB-dD-TRe"/>
                         <outlet property="backgroundImageView" destination="af0-Qc-xgT" id="6UQ-92-9Ey"/>
                         <outlet property="dreamContentTextView" destination="16m-dB-0rH" id="OMM-mW-PJU"/>
                         <outlet property="dreamContentView" destination="gY5-Cg-MWW" id="y3t-Mk-ELB"/>
@@ -946,6 +964,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Lh-w8T">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="JbM-1j-UYH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-em-n6r">
@@ -979,6 +1001,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="IZg-e2-e5f"/>
                     <connections>
+                        <outlet property="background2ImageView" destination="JbM-1j-UYH" id="I9h-h2-Opi"/>
                         <outlet property="backgroundImageView" destination="wFI-Lh-w8T" id="bYh-pw-Dfx"/>
                         <outlet property="cancelButton" destination="AKw-tA-MCB" id="hsb-va-frd"/>
                         <outlet property="saveButton" destination="MbI-em-n6r" id="mdn-qh-Ero"/>
@@ -988,7 +1011,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-aW-CI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="YLD-se-QiW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="954" y="1760"/>
+            <point key="canvasLocation" x="953.62318840579712" y="1759.8214285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BpB-HP-ACP">

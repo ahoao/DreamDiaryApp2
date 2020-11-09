@@ -20,9 +20,12 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     
     @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var background2ImageView: UIImageView!
+    
     
     override func viewDidLoad() {
-        backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
+        backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
+         background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
    
     
     
@@ -70,6 +73,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                         
                         self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         }, completion: nil)
+        
     }
     
     
@@ -454,8 +458,13 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         if segue.identifier == "toTweet" {
             // 2. 遷移先のViewControllerを取得
             let next = segue.destination as? ShareViewController
+            let selectedDate = datePicker.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            let stringDate = dateFormatter.string(from: selectedDate)
+            
             // 3. １で用意した遷移先の変数に値を渡す
-            next?.dateResult = selectedDate.
+            next?.dateResult = stringDate
         }
     }
     
@@ -486,7 +495,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         print("データ書き込み完了")
         
         // 4. 画面遷移実行
-        performSegue(withIdentifier: "ShareViewController", sender: nil)
+//        performSegue(withIdentifier: "ShareViewController", sender: nil)
         //        前のページに戻る
 //        dismiss(animated: true, completion: nil)
     }
@@ -512,6 +521,15 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        delay: 0.0,
                        options: [.repeat, .curveLinear],
                        animations:{ self.backgroundImageView.frame.origin = endOrigin },
+                       completion: nil)
+        
+        let startOrigin2 = CGPoint(x: view.frame.width, y: 0.0)
+        let endOrigin2 = CGPoint.zero
+        self.background2ImageView.frame.origin = startOrigin2
+        UIView.animate(withDuration: 12.0,
+                       delay: 0.0,
+                       options: [.repeat, .curveLinear],
+                       animations:{ self.background2ImageView.frame.origin = endOrigin2 },
                        completion: nil)
         
         

@@ -9,7 +9,7 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
     @IBOutlet weak var background2ImageView: UIImageView!
     
     override func viewDidLoad() {
-        backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
+        backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
         background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
         
     }

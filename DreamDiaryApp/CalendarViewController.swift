@@ -5,9 +5,6 @@ import RealmSwift
 import TagListView
 
 
-
-
-
 //ディスプレイサイズ取得
 let w = UIScreen.main.bounds.size.width
 let h = UIScreen.main.bounds.size.height
@@ -17,37 +14,24 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     let MARGIN: CGFloat = 10
     
     @IBOutlet weak var dateDisplayLabel: UILabel!
-    
     @IBOutlet weak var tagDisplayListView: TagListView!
-    
-    
     @IBOutlet weak var diaryDisplayTextView: UITextView!
-    
-    
     @IBOutlet weak var feelingDisplayImage: UIImageView!
     @IBOutlet weak var favDisplayImage: UIImageView!
-    
-    
     @IBOutlet weak var frameImage: UIImageView!
-    
-    
     @IBOutlet weak var backgroundImageView: UIImageView!
-    
     @IBOutlet weak var background2ImageView: UIImageView!
     
     override func viewDidLoad() {
         
-        backgroundImageView.frame.size = CGSize(width: view.frame.width * 2,  height: view.frame.height)
-         background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
+        backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
+        background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
     }
     
     //カレンダー部分
     let dateView = FSCalendar(frame: CGRect(x: 0, y: 30, width: w, height: 400))
     
     @IBOutlet weak var calendar: FSCalendar!
-    
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
@@ -70,10 +54,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         let endOrigin2 = CGPoint.zero
         self.background2ImageView.frame.origin = startOrigin2
         UIView.animate(withDuration: 12.0,
-        delay: 0.0,
-        options: [.repeat, .curveLinear],
-        animations:{ self.background2ImageView.frame.origin = endOrigin2 },
-        completion: nil)
+                       delay: 0.0,
+                       options: [.repeat, .curveLinear],
+                       animations:{ self.background2ImageView.frame.origin = endOrigin2 },
+                       completion: nil)
         
         //カレンダー設定
         self.dateView.dataSource = self
@@ -88,13 +72,6 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         dateDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
         dateDisplayLabel.textColor = .white
         view.addSubview(dateDisplayLabel)
-        
-        //「タグ」表示設定
-        //        tagDisplayLabel.text = ""
-        //        tagDisplayLabel.textAlignment = .center
-        //        tagDisplayLabel.textColor = .white
-        //        tagDisplayLabel.font = UIFont.systemFont(ofSize: 20.0)
-        //        view.addSubview(tagDisplayLabel)
         
         //スケジュール内容表示設定
         diaryDisplayTextView.text = ""
@@ -196,7 +173,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         
         //予定がある場合、スケジュールをDBから取得・表示する。
         //無い場合、「スケジュールはありません」と表示。
-        diaryDisplayTextView.text = "スケジュールはありません"
+        diaryDisplayTextView.text = "この日は夢を見ていません"
         diaryDisplayTextView.textColor = .lightGray
         //        view.addSubview(labelData)
         
@@ -241,8 +218,6 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
             }
         }
     }
-    
-    
     
 }
 
