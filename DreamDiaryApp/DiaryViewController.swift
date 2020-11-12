@@ -39,6 +39,11 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var favoriteDreamButton: UIButton!
     
     
+   
+    @IBOutlet weak var diarySaveButton: UIButton?
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    
     @IBOutlet weak var feelingButton1: UIButton!
     
     var favoriteDream = false
@@ -532,6 +537,16 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations:{ self.background2ImageView.frame.origin = endOrigin2 },
                        completion: nil)
         
+        diarySaveButton?.layer.cornerRadius = 10.0
+        diarySaveButton?.layer.masksToBounds = true
+        diarySaveButton?.layer.borderColor = UIColor.white.cgColor
+        diarySaveButton?.layer.borderWidth = 2.0
+        
+        cancelButton?.layer.cornerRadius = 10.0
+        cancelButton?.layer.masksToBounds = true
+        cancelButton?.layer.borderColor = UIColor.white.cgColor
+        cancelButton?.layer.borderWidth = 2.0
+        
         
         self.setView()
         
@@ -542,7 +557,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         diaryTextView.layer.borderColor = UIColor.white.cgColor
         
         // 枠の幅
-        diaryTextView.layer.borderWidth = 2.0
+        diaryTextView.layer.borderWidth = 1.5
         
         // 枠を角丸にする
         diaryTextView.layer.cornerRadius = 20.0
@@ -552,13 +567,13 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         tagTextField.layer.borderColor = UIColor.white.cgColor
         
         // 枠の幅
-        tagTextField.layer.borderWidth = 2.0
+        tagTextField.layer.borderWidth = 1.5
         
         // 枠を角丸にする
         tagTextField.layer.cornerRadius = 20.0
         tagTextField.layer.masksToBounds = true
         
-        
+       
     }
     func setView() {
         
