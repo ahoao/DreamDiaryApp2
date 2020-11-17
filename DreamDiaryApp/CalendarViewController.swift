@@ -203,9 +203,9 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         print("result =", result)
         for resultData in result {
             if resultData.date == da {
-                var tag = resultData.tag
+                let tag = resultData.tag
                 if tag.count > 0 {
-                    var tags = tag.components(separatedBy: ":")
+                    let tags = tag.components(separatedBy: ":")
                     
                     tagDisplayListView.addTags(tags)
                 }
@@ -213,13 +213,14 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
                 diaryDisplayTextView.text = resultData.content
                 displayImage(displayImageNo: resultData.feelingTag)
                 favImage(favImage: resultData.favoriteDream)
-                print("diaryDisplayTextView.text =", diaryDisplayTextView.text)
+                print("diaryDisplayTextView.text =", diaryDisplayTextView.text!)
                 view.addSubview(diaryDisplayTextView)
             }
         }
     }
-    
 }
+
+
 
 
 

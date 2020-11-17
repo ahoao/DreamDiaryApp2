@@ -1,26 +1,24 @@
-//
-//  AppDelegate.swift
-//  DreamDiaryApp
-//
-//  Created by Ao Nagasawa on 2020/09/14.
-//  Copyright © 2020 Ao.Nagasawa. All rights reserved.
-//
-
 import UIKit
 import Firebase
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-         FirebaseApp.configure()  
+         FirebaseApp.configure()
+    TWTRTwitter.sharedInstance().start(withConsumerKey:"{Djq3rXeza8a05BJbXNQYaqL3i}",consumerSecret:"{wcEkZmrDhELTuYnd8ojybPhBWoPkIyJnsIPBBPBrtNTY23SMLz}")
         return true
     }
 
     // MARK: UISceneSession Lifecycle
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return TWTRTwitter.sharedInstance().application(app, open: url, options: options)
+    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

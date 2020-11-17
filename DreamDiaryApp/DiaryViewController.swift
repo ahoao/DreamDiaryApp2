@@ -517,7 +517,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     var imageArray:Array<UIImageView> = Array()
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         
         let startOrigin = CGPoint.zero
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)

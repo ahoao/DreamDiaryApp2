@@ -281,9 +281,14 @@ PODS:
   - FirebaseStorage (3.7.0):
     - FirebaseCore (~> 6.8)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Auth (4.1.1):
+    - Firebase/Auth
   - FirebaseUI/Storage (8.4.2):
     - Firebase/Storage (~> 6.0)
     - SDWebImage (~> 5.0)
+  - FirebaseUI/Twitter (4.1.1):
+    - FirebaseUI/Auth
+    - TwitterKit (~> 2.4)
   - FSCalendar (2.8.1)
   - GoogleAppMeasurement (6.6.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
@@ -338,6 +343,7 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.4.0)
   - leveldb-library (1.22)
+  - LicensePlist (3.0.5)
   - nanopb (1.30905.0):
     - nanopb/decode (= 1.30905.0)
     - nanopb/encode (= 1.30905.0)
@@ -353,6 +359,9 @@ PODS:
     - SDWebImage/Core (= 5.8.4)
   - SDWebImage/Core (5.8.4)
   - TagListView (1.4.1)
+  - TwitterCore (3.2.0)
+  - TwitterKit (2.8.1):
+    - TwitterCore (>= 2.8)
 
 DEPENDENCIES:
   - CalculateCalendarLogic
@@ -363,7 +372,9 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - FirebaseUI/Storage
+  - FirebaseUI/Twitter
   - FSCalendar (from `https://github.com/WenchaoD/FSCalendar`)
+  - LicensePlist
   - RealmSwift
   - TagListView (~> 1.0)
 
@@ -389,12 +400,15 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
+    - LicensePlist
     - nanopb
     - PromisesObjC
     - Realm
     - RealmSwift
     - SDWebImage
     - TagListView
+    - TwitterCore
+    - TwitterKit
 
 EXTERNAL SOURCES:
   FSCalendar:
@@ -418,7 +432,7 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 5ea7b0878363f9ec66bdcee0c29ad875d1b511ac
   FirebaseInstallations: 3c520c951305cbf9ca54eb891ff9e6d1fd384881
   FirebaseStorage: af7bdbd12177cf567df00904e3e3a93704f25b15
-  FirebaseUI: e57e9b9c4340631151fbe67a14206d23d0974f37
+  FirebaseUI: 5ebebe2c096c71f20abd1d43d0388958373bdaa0
   FSCalendar: 5245140456fcbcac5824c203b98bd8068bdfee1a
   GoogleAppMeasurement: 2fd5c5a56c069db635c8e7b92d4809a9591d0a69
   GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
@@ -427,13 +441,16 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  LicensePlist: 11c638fa9dc22ddb5771cdf910242ae1ba2684da
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
   Realm: 2d57ea355bf8ca2a0964d6bfb38d28d7ff2addf6
   RealmSwift: 0a709536ecea30eea1d3c514f6ade2ed078dee3c
   SDWebImage: cf6922231e95550934da2ada0f20f2becf2ceba9
   TagListView: a1c236d17960a0cf64156725a76ce6d73ebce2be
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 3b6044a7320340326a4098f3e37aa1dbaeb94942
 
-PODFILE CHECKSUM: be9370a089ffaa2ed824ca055cae3206ddb86b6a
+PODFILE CHECKSUM: 313dd95595934b7d188dfc609d06ec64b4371fd7
 
 COCOAPODS: 1.9.3

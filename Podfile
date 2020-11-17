@@ -18,6 +18,10 @@ pod 'FSCalendar', :git=> 'https://github.com/WenchaoD/FSCalendar'
 pod 'CalculateCalendarLogic'
 pod 'RealmSwift'
 pod 'CircleBar'
+pod 'LicensePlist'
+pod 'FirebaseUI/Twitter'
 
 end
+
+
 
