@@ -1,10 +1,30 @@
 import UIKit
 import FirebaseAuth
-import TwitterKit
-
 
 class ViewController: UIViewController {
+     var provider: OAuthProvider?
     
+    
+    @IBAction func buttonDidPush() {
+        print("buttonDidPush")
+        self.provider = OAuthProvider(providerID: TwitterAuthProviderID)
+
+        guard let provider = self.provider else { return }
+
+        provider.customParameters = [
+            "force_login": "true",
+        ]
+
+        provider.getCredentialWith(nil) { credential, error in
+            guard let credential = credential, error == nil else {
+                print("Error: \(error as Optional)")
+                return
+            }
+            Auth.auth().signIn(with: credential) { (result, error) in
+                // signIn後の処理
+            }
+        }
+    }
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     
@@ -25,24 +45,6 @@ class ViewController: UIViewController {
         // 枠を角丸にする
         touchDiaryButton.layer.cornerRadius = 20.0
         touchDiaryButton.layer.masksToBounds = true
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let logInButton = TWTRLogInButton(logInCompletion: { session, error in
-            if let session = session {
-                let authToken = session.authToken
-                let authTokenSecret = session.authTokenSecret
-                let credential = TwitterAuthProvider.credential(withToken: session.authToken, secret: session.authTokenSecret)
-
-                Auth.auth().signIn(with: credential) { (authResult, error) in
-                    if let error = error { return }
-                    //Sign In Completed
-                }
-            }
-        })
-        logInButton.center = self.view.center
-        self.view.addSubview(logInButton)
     }
     
 }

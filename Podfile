@@ -19,7 +19,7 @@ pod 'CalculateCalendarLogic'
 pod 'RealmSwift'
 pod 'CircleBar'
 pod 'LicensePlist'
-pod 'FirebaseUI/Twitter'
+pod 'FirebaseUI'
 
 end
 
