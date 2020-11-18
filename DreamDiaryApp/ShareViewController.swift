@@ -45,6 +45,20 @@ class ShareViewController: UIViewController {
                        options: [.repeat, .curveLinear],
                        animations:{ self.background2ImageView.frame.origin = endOrigin2 },
                        completion: nil)
+        
+        saveButton?.layer.cornerRadius = 10.0
+        saveButton?.layer.masksToBounds = true
+        saveButton?.layer.borderColor = UIColor.white.cgColor
+        saveButton?.layer.borderWidth = 2.0
+        saveButton?.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        
+        cancelButton?.layer.cornerRadius = 10.0
+        cancelButton?.layer.masksToBounds = true
+        cancelButton?.layer.borderColor = UIColor.white.cgColor
+        cancelButton?.layer.borderWidth = 2.0
+        cancelButton?.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        
+        
     }
     
     @IBAction func tweetButton(_ sender: Any) {

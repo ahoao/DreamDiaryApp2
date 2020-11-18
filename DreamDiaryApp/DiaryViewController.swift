@@ -25,10 +25,10 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     override func viewDidLoad() {
         backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
-         background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
-   
-    
-    
+        background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
+        
+        
+        
     }
     
     @IBOutlet weak var diaryTextView: UITextView!
@@ -39,7 +39,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var favoriteDreamButton: UIButton!
     
     
-   
+    
     @IBOutlet weak var diarySaveButton: UIButton?
     @IBOutlet weak var cancelButton: UIButton!
     
@@ -97,14 +97,11 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func feelingTag1(_ sender: UIButton) {
         feelingButtonTag = sender.tag
     }
-    
-    
-    
     /// ボタンを押したタイミングで呼ばれます。
     @IBAction func didTouchDownButton() {
         // ボタンを縮こませます
         UIView.animate(withDuration: 0.2, animations: { 
-            self.feelingButton1.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         })
     }
     
@@ -113,7 +110,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func didTouchDragExitButton() {
         // 縮こまったボタンをアニメーションで元のサイズに戻します
         UIView.animate(withDuration: 0.2, animations: { 
-            self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.feelingButton1.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         })
     }
     
@@ -128,7 +125,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: .curveEaseOut,
                        animations: { () -> Void in
                         
-                        self.feelingButton1.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        self.feelingButton1.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
     }
     
@@ -165,7 +162,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func didTouchDownButton2() {
         // ボタンを縮こませます
         UIView.animate(withDuration: 0.2, animations: {
-            self.feelingButton2.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.feelingButton2.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         })
     }
     
@@ -188,7 +185,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: .curveEaseOut,
                        animations: { () -> Void in
                         
-                        self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        self.feelingButton2.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
     }
     
@@ -225,7 +222,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func didTouchDownButton3() {
         // ボタンを縮こませます
         UIView.animate(withDuration: 0.2, animations: {
-            self.feelingButton3.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.feelingButton3.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         })
     }
     
@@ -248,7 +245,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: .curveEaseOut,
                        animations: { () -> Void in
                         
-                        self.feelingButton3.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        self.feelingButton3.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
     }
     
@@ -283,7 +280,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func didTouchDownButton4() {
         // ボタンを縮こませます
         UIView.animate(withDuration: 0.2, animations: {
-            self.feelingButton4.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.feelingButton4.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         })
     }
     
@@ -306,7 +303,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: .curveEaseOut,
                        animations: { () -> Void in
                         
-                        self.feelingButton4.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        self.feelingButton4.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
     }
     
@@ -341,7 +338,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func didTouchDownButton5() {
         // ボタンを縮こませます
         UIView.animate(withDuration: 0.2, animations: {
-            self.feelingButton5.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.feelingButton5.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         })
     }
     
@@ -364,7 +361,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: .curveEaseOut,
                        animations: { () -> Void in
                         
-                        self.feelingButton5.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        self.feelingButton5.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
     }
     
@@ -400,7 +397,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func didTouchDownButton6() {
         // ボタンを縮こませます
         UIView.animate(withDuration: 0.2, animations: {
-            self.feelingButton6.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.feelingButton6.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         })
     }
     
@@ -423,7 +420,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        options: .curveEaseOut,
                        animations: { () -> Void in
                         
-                        self.feelingButton6.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        self.feelingButton6.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
         }, completion: nil)
     }
     
@@ -458,7 +455,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     // segueが動作することをViewControllerに通知するメソッド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        
         // segueのIDを確認して特定のsegueのときのみ動作させる
         if segue.identifier == "toTweet" {
             // 2. 遷移先のViewControllerを取得
@@ -476,7 +473,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBAction func diarySave(_ sender: Any) {
         let realm = try! Realm()
         
-         performSegue(withIdentifier: "toTweet", sender: nil)
+        performSegue(withIdentifier: "toTweet", sender: nil)
         
         let selectedDate = datePicker.date
         print("datePickerの中身\(selectedDate)")
@@ -500,15 +497,15 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         print("データ書き込み完了")
         
         // 4. 画面遷移実行
-//        performSegue(withIdentifier: "ShareViewController", sender: nil)
+        //        performSegue(withIdentifier: "ShareViewController", sender: nil)
         //        前のページに戻る
-//        dismiss(animated: true, completion: nil)
+        //        dismiss(animated: true, completion: nil)
     }
     
     
-//    @IBAction func touchSaveButton(_ sender: UIButton) {let vc = ShareViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
+    //    @IBAction func touchSaveButton(_ sender: UIButton) {let vc = ShareViewController()
+    //        navigationController?.pushViewController(vc, animated: true)
+    //    }
     
     // DB内のタスクが格納されるリスト。
     // 以降内容をアップデートするとリスト内は自動的に更新される。
@@ -542,10 +539,12 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         diarySaveButton?.layer.borderColor = UIColor.white.cgColor
         diarySaveButton?.layer.borderWidth = 2.0
         
+        
         cancelButton?.layer.cornerRadius = 10.0
         cancelButton?.layer.masksToBounds = true
         cancelButton?.layer.borderColor = UIColor.white.cgColor
         cancelButton?.layer.borderWidth = 2.0
+      
         
         
         self.setView()
@@ -573,7 +572,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         tagTextField.layer.cornerRadius = 20.0
         tagTextField.layer.masksToBounds = true
         
-       
+        
     }
     func setView() {
         
@@ -621,10 +620,10 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
             displayTagView.addTags([tagTextField.text!])
             
             // テキストフィールドをクリアしてレイアウト調整
-             if tag.count > 0 {
-                           tag += ":"
-                       }
-                       tag += textField.text!
+            if tag.count > 0 {
+                tag += ":"
+            }
+            tag += textField.text!
             
             textField.text = nil
             updateLayout()

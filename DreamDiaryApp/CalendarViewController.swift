@@ -174,7 +174,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         //予定がある場合、スケジュールをDBから取得・表示する。
         //無い場合、「スケジュールはありません」と表示。
         diaryDisplayTextView.text = "この日は夢を見ていません"
-        diaryDisplayTextView.textColor = .lightGray
+        diaryDisplayTextView.textColor = .white
         //        view.addSubview(labelData)
         
         let tmpDate = Calendar(identifier: .gregorian)
