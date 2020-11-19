@@ -46,17 +46,45 @@ class ShareViewController: UIViewController {
                        animations:{ self.background2ImageView.frame.origin = endOrigin2 },
                        completion: nil)
         
-        saveButton?.layer.cornerRadius = 10.0
-        saveButton?.layer.masksToBounds = true
-        saveButton?.layer.borderColor = UIColor.white.cgColor
-        saveButton?.layer.borderWidth = 2.0
-        saveButton?.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        //        ここから保存＆キャンセルのボタンカスタム
         
-        cancelButton?.layer.cornerRadius = 10.0
-        cancelButton?.layer.masksToBounds = true
-        cancelButton?.layer.borderColor = UIColor.white.cgColor
-        cancelButton?.layer.borderWidth = 2.0
-        cancelButton?.contentEdgeInsets = UIEdgeInsets(top: 10, left: 15, bottom: 10, right: 15)
+        saveButton?.setTitleColor(UIColor.white, for: .normal)
+        saveButton?.setTitle("Tweetする", for: .normal)
+        // 角丸で親しみやすく
+        saveButton?.layer.cornerRadius = saveButton?.bounds.midY as! CGFloat
+        // 押せそうにみえる影
+        saveButton?.layer.shadowColor = UIColor.shadowColor.cgColor
+        saveButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
+        saveButton?.layer.shadowOpacity = 0.7
+        saveButton?.layer.shadowRadius = 10
+        // グラデーションで強めのアピール (リサイズ非対応！）
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = saveButton?.bounds as! CGRect
+        gradientLayer.cornerRadius = saveButton?.bounds.midY as! CGFloat
+        gradientLayer.colors = [UIColor.startColor.cgColor, UIColor.endColor.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        saveButton?.layer.insertSublayer(gradientLayer, at: 0)
+        
+        cancelButton?.setTitleColor(UIColor.white, for: .normal)
+        cancelButton?.setTitle("キャンセル", for: .normal)
+        // 角丸で親しみやすく
+        cancelButton?.layer.cornerRadius = cancelButton?.bounds.midY as! CGFloat
+        // 押せそうにみえる影
+        cancelButton?.layer.shadowColor = UIColor.shadowColor.cgColor
+        cancelButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cancelButton?.layer.shadowOpacity = 0.7
+        cancelButton?.layer.shadowRadius = 10
+        // グラデーションで強めのアピール (リサイズ非対応！）
+        let gradientLayer2 = CAGradientLayer()
+        gradientLayer2.frame = cancelButton?.bounds as! CGRect
+        gradientLayer2.cornerRadius = cancelButton?.bounds.midY as! CGFloat
+        gradientLayer2.colors = [UIColor.startColor.cgColor, UIColor.endColor.cgColor]
+        gradientLayer2.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer2.endPoint = CGPoint(x: 1, y: 1)
+        
+        cancelButton?.layer.insertSublayer(gradientLayer2, at: 0)
         
         
     }

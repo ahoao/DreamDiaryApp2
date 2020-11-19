@@ -1,8 +1,6 @@
-
 import UIKit
 import TagListView
 import RealmSwift
-
 
 
 class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate {
@@ -10,8 +8,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     var feelingButtonTag = Int()
     var faveriteDream = 0
     var tag: String = ""
-    
-    
     
     let MARGIN: CGFloat = 10
     
@@ -27,8 +23,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
         background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
         
-        
-        
     }
     
     @IBOutlet weak var diaryTextView: UITextView!
@@ -37,7 +31,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var favoriteDreamButton: UIButton!
-    
     
     
     @IBOutlet weak var diarySaveButton: UIButton?
@@ -495,17 +488,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         }
         
         print("データ書き込み完了")
-        
-        // 4. 画面遷移実行
-        //        performSegue(withIdentifier: "ShareViewController", sender: nil)
-        //        前のページに戻る
-        //        dismiss(animated: true, completion: nil)
     }
-    
-    
-    //    @IBAction func touchSaveButton(_ sender: UIButton) {let vc = ShareViewController()
-    //        navigationController?.pushViewController(vc, animated: true)
-    //    }
     
     // DB内のタスクが格納されるリスト。
     // 以降内容をアップデートするとリスト内は自動的に更新される。
@@ -534,19 +517,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations:{ self.background2ImageView.frame.origin = endOrigin2 },
                        completion: nil)
         
-        diarySaveButton?.layer.cornerRadius = 10.0
-        diarySaveButton?.layer.masksToBounds = true
-        diarySaveButton?.layer.borderColor = UIColor.white.cgColor
-        diarySaveButton?.layer.borderWidth = 2.0
-        
-        
-        cancelButton?.layer.cornerRadius = 10.0
-        cancelButton?.layer.masksToBounds = true
-        cancelButton?.layer.borderColor = UIColor.white.cgColor
-        cancelButton?.layer.borderWidth = 2.0
-      
-        
-        
         self.setView()
         
         tagTextField.delegate = self
@@ -572,6 +542,45 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         tagTextField.layer.cornerRadius = 20.0
         tagTextField.layer.masksToBounds = true
         
+        //        ここから保存＆キャンセルのボタンカスタム
+        
+        diarySaveButton?.setTitleColor(UIColor.white, for: .normal)
+        diarySaveButton?.setTitle("保存", for: .normal)
+        // 角丸で親しみやすく
+        diarySaveButton?.layer.cornerRadius = diarySaveButton?.bounds.midY as! CGFloat
+        // 押せそうにみえる影
+        diarySaveButton?.layer.shadowColor = UIColor.shadowColor.cgColor
+        diarySaveButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
+        diarySaveButton?.layer.shadowOpacity = 0.7
+        diarySaveButton?.layer.shadowRadius = 10
+        // グラデーションで強めのアピール (リサイズ非対応！）
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = diarySaveButton?.bounds as! CGRect
+        gradientLayer.cornerRadius = diarySaveButton?.bounds.midY as! CGFloat
+        gradientLayer.colors = [UIColor.startColor.cgColor, UIColor.endColor.cgColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        
+        diarySaveButton?.layer.insertSublayer(gradientLayer, at: 0)
+        
+        cancelButton?.setTitleColor(UIColor.white, for: .normal)
+        cancelButton?.setTitle("キャンセル", for: .normal)
+        // 角丸で親しみやすく
+        cancelButton?.layer.cornerRadius = cancelButton?.bounds.midY as! CGFloat
+        // 押せそうにみえる影
+        cancelButton?.layer.shadowColor = UIColor.shadowColor.cgColor
+        cancelButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
+        cancelButton?.layer.shadowOpacity = 0.7
+        cancelButton?.layer.shadowRadius = 10
+        // グラデーションで強めのアピール (リサイズ非対応！）
+        let gradientLayer2 = CAGradientLayer()
+        gradientLayer2.frame = cancelButton?.bounds as! CGRect
+        gradientLayer2.cornerRadius = cancelButton?.bounds.midY as! CGFloat
+        gradientLayer2.colors = [UIColor.startColor.cgColor, UIColor.endColor.cgColor]
+        gradientLayer2.startPoint = CGPoint(x: 0, y: 0.5)
+        gradientLayer2.endPoint = CGPoint(x: 1, y: 1)
+        
+        cancelButton?.layer.insertSublayer(gradientLayer2, at: 0)
         
     }
     func setView() {
