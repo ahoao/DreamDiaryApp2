@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // 押せそうにみえる影
         touchDiaryButton.layer.shadowColor = UIColor.shadowColor.cgColor
         touchDiaryButton.layer.shadowOffset = CGSize(width: 0, height: 3)
-        touchDiaryButton.layer.shadowOpacity = 0.8
+        touchDiaryButton.layer.shadowOpacity = 0.9
         touchDiaryButton.layer.shadowRadius = 10
         // グラデーションで強めのアピール (リサイズ非対応！）
         let gradientLayer = CAGradientLayer()

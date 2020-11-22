@@ -551,7 +551,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         // 押せそうにみえる影
         diarySaveButton?.layer.shadowColor = UIColor.shadowColor.cgColor
         diarySaveButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
-        diarySaveButton?.layer.shadowOpacity = 0.7
+        diarySaveButton?.layer.shadowOpacity = 0.9
         diarySaveButton?.layer.shadowRadius = 10
         // グラデーションで強めのアピール (リサイズ非対応！）
         let gradientLayer = CAGradientLayer()
@@ -570,7 +570,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         // 押せそうにみえる影
         cancelButton?.layer.shadowColor = UIColor.shadowColor.cgColor
         cancelButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
-        cancelButton?.layer.shadowOpacity = 0.7
+        cancelButton?.layer.shadowOpacity = 0.9
         cancelButton?.layer.shadowRadius = 10
         // グラデーションで強めのアピール (リサイズ非対応！）
         let gradientLayer2 = CAGradientLayer()

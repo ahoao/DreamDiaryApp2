@@ -55,7 +55,7 @@ class ShareViewController: UIViewController {
         // 押せそうにみえる影
         saveButton?.layer.shadowColor = UIColor.shadowColor.cgColor
         saveButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
-        saveButton?.layer.shadowOpacity = 0.7
+        saveButton?.layer.shadowOpacity = 0.9
         saveButton?.layer.shadowRadius = 10
         // グラデーションで強めのアピール (リサイズ非対応！）
         let gradientLayer = CAGradientLayer()
@@ -74,7 +74,7 @@ class ShareViewController: UIViewController {
         // 押せそうにみえる影
         cancelButton?.layer.shadowColor = UIColor.shadowColor.cgColor
         cancelButton?.layer.shadowOffset = CGSize(width: 0, height: 3)
-        cancelButton?.layer.shadowOpacity = 0.7
+        cancelButton?.layer.shadowOpacity = 0.9
         cancelButton?.layer.shadowRadius = 10
         // グラデーションで強めのアピール (リサイズ非対応！）
         let gradientLayer2 = CAGradientLayer()
