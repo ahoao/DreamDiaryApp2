@@ -189,66 +189,6 @@
             </objects>
             <point key="canvasLocation" x="2011.594202898551" y="120.53571428571428"/>
         </scene>
-        <!--Setting View Controller-->
-        <scene sceneID="vp6-r1-ks7">
-            <objects>
-                <viewController id="3zS-lK-7ys" customClass="SettingViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6BI-cP-7v2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-NO-NOR">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="MGR-Ay-gp0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EhT-ph-lTA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="ACQ-tl-a25">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ACQ-tl-a25" id="bJK-k1-JcK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="3zS-lK-7ys" id="U6E-Dh-2fO"/>
-                                    <outlet property="delegate" destination="3zS-lK-7ys" id="vhY-8l-trJ"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="aKE-yI-Acy"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="EhT-ph-lTA" firstAttribute="top" secondItem="aKE-yI-Acy" secondAttribute="top" id="3pt-Vn-Kq7"/>
-                            <constraint firstItem="aKE-yI-Acy" firstAttribute="trailing" secondItem="EhT-ph-lTA" secondAttribute="trailing" id="5uz-hF-cLS"/>
-                            <constraint firstItem="aKE-yI-Acy" firstAttribute="bottom" secondItem="EhT-ph-lTA" secondAttribute="bottom" id="biu-pm-tB3"/>
-                            <constraint firstItem="EhT-ph-lTA" firstAttribute="leading" secondItem="aKE-yI-Acy" secondAttribute="leading" id="oTw-kt-tzU"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="ellipsis.circle.fill" catalog="system" id="3IV-hC-0z1"/>
-                    <connections>
-                        <outlet property="background2ImageView" destination="MGR-Ay-gp0" id="4bN-j1-nWc"/>
-                        <outlet property="backgroundImageView" destination="XOT-NO-NOR" id="6eZ-2y-Laq"/>
-                        <outlet property="settingTableView" destination="EhT-ph-lTA" id="EP2-bt-iIR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fco-0w-ooW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2790" y="121"/>
-        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="vLu-Hh-H23">
             <objects>
@@ -427,12 +367,11 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ygM-cP-Tuq"/>
                         <segue destination="NWM-me-IFh" kind="relationship" relationship="viewControllers" id="zcw-oo-0yh"/>
                         <segue destination="Jze-c1-Ziv" kind="relationship" relationship="viewControllers" id="TCJ-PZ-6Yt"/>
-                        <segue destination="3zS-lK-7ys" kind="relationship" relationship="viewControllers" id="RUR-iz-mtY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hh0-DV-1T7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1593" y="-660"/>
+            <point key="canvasLocation" x="1183" y="-668"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="P4S-xn-yjL">
@@ -611,7 +550,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="NPt-Qk-4lE">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="NPt-Qk-4lE">
                                 <rect key="frame" x="20" y="537" width="374" height="100"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1069,7 +1008,6 @@
         <image name="backgroundmoon.png" width="255.08570861816406" height="551.93145751953125"/>
         <image name="bed.double.fill" catalog="system" width="128" height="82"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="ellipsis.circle.fill" catalog="system" width="128" height="121"/>
         <image name="favAfter.png" width="64" height="64"/>
         <image name="favBefore.png" width="64" height="64"/>
         <image name="feeling1after.png" width="151.817138671875" height="156.54856872558594"/>

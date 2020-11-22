@@ -3,7 +3,16 @@ import TagListView
 import RealmSwift
 
 
-class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate {
+extension ViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+}
+
+class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate, UITextViewDelegate {
     
     var feelingButtonTag = Int()
     var faveriteDream = 0
@@ -15,17 +24,71 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     let textField = UITextField()
     
     
+    
+    
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var background2ImageView: UIImageView!
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            } else {
+                let suggestionHeight = self.view.frame.origin.y + keyboardSize.height
+                self.view.frame.origin.y -= suggestionHeight
+            }
+        }
+    }
+    @objc func keyboardWillHide() {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }}
+    
+    
     
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        let custombar = UIView(frame: CGRect(x:0, y:0,width:(UIScreen.main.bounds.size.width),height:40))
+        custombar.backgroundColor = UIColor.groupTableViewBackground
+        let commitBtn = UIButton(frame: CGRect(x:(UIScreen.main.bounds.size.width)-50,y:0,width:50,height:40))
+        commitBtn.setTitle("閉じる", for: .normal)
+        commitBtn.setTitleColor(UIColor.blue, for:.normal)
+        commitBtn.addTarget(self, action:#selector(DiaryViewController.onClickCommitButton), for: .touchUpInside)
+        commitBtn.addTarget(self, action:#selector(DiaryViewController.onClickCommitButton2), for: .touchUpInside)
+        custombar.addSubview(commitBtn)
+        diaryTextView.inputAccessoryView = custombar
+        diaryTextView.keyboardType = .default
+        diaryTextView.delegate = self
+        
+        tagTextField.inputAccessoryView = custombar
+        tagTextField.keyboardType = .default
+        tagTextField.delegate = self
+        
         backgroundImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
         background2ImageView.frame.size = CGSize(width: view.frame.width,  height: view.frame.height)
         
     }
     
     @IBOutlet weak var diaryTextView: UITextView!
+    
+    @objc func onClickCommitButton (sender: UIButton) {
+        if(diaryTextView.isFirstResponder){
+            diaryTextView.resignFirstResponder()
+        }
+        
+    }
+    @objc func onClickCommitButton2 (sender: UIButton) {
+        if(tagTextField.isFirstResponder){
+            tagTextField.resignFirstResponder()
+        }
+        
+    }
+    
     @IBOutlet weak var tagTextField: UITextField!
     @IBOutlet weak var displayTagView: TagListView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -70,7 +133,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton2.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }, completion: nil)
+                       }, completion: nil)
         
     }
     
@@ -119,7 +182,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton1.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+                       }, completion: nil)
     }
     
     @IBAction func imageButtonChange(_ sender: Any) {
@@ -179,7 +242,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton2.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+                       }, completion: nil)
     }
     
     
@@ -239,7 +302,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton3.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+                       }, completion: nil)
     }
     
     
@@ -297,7 +360,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton4.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+                       }, completion: nil)
     }
     
     @IBAction func imageButtonChange4(_ sender: Any) {
@@ -355,7 +418,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton5.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+                       }, completion: nil)
     }
     
     
@@ -414,7 +477,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
                        animations: { () -> Void in
                         
                         self.feelingButton6.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-        }, completion: nil)
+                       }, completion: nil)
     }
     
     
