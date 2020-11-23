@@ -83,6 +83,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         let selectedImage = UIImage(named: "icon")
         feelingDisplayImage.image = selectedImage
         view.addSubview(feelingDisplayImage)
+        
     }
     
     var displayImageNo = 0

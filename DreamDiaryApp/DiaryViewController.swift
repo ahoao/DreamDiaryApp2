@@ -4,12 +4,10 @@ import RealmSwift
 
 
 extension ViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
-    
 }
 
 class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate, UITextViewDelegate {
@@ -29,35 +27,24 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var background2ImageView: UIImageView!
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            } else {
-                let suggestionHeight = self.view.frame.origin.y + keyboardSize.height
-                self.view.frame.origin.y -= suggestionHeight
-            }
-        }
+    
+    // 編集中のTextFieldを保持する変数
+    private var _activeTextField: UITextField? = nil
+    // TextFieldの編集直後に呼ばれる
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        // 編集対象のTextFieldを保存する
+        _activeTextField = textField
+        return true;
     }
-    @objc func keyboardWillHide() {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-        }}
-    
-    
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
         
         let custombar = UIView(frame: CGRect(x:0, y:0,width:(UIScreen.main.bounds.size.width),height:40))
         custombar.backgroundColor = UIColor.groupTableViewBackground
-        let commitBtn = UIButton(frame: CGRect(x:(UIScreen.main.bounds.size.width)-50,y:0,width:50,height:40))
+        let commitBtn = UIButton(frame: CGRect(x:(UIScreen.main.bounds.size.width)-80,y:0,width:80,height:40))
         commitBtn.setTitle("閉じる", for: .normal)
-        commitBtn.setTitleColor(UIColor.blue, for:.normal)
+        commitBtn.setTitleColor(UIColor.white, for:.normal)
         commitBtn.addTarget(self, action:#selector(DiaryViewController.onClickCommitButton), for: .touchUpInside)
         commitBtn.addTarget(self, action:#selector(DiaryViewController.onClickCommitButton2), for: .touchUpInside)
         custombar.addSubview(commitBtn)
@@ -559,8 +546,15 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     
     var imageArray:Array<UIImageView> = Array()
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Notificationを設定する
+        let nc = NotificationCenter.default
+        nc.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        nc.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         let startOrigin = CGPoint.zero
         let endOrigin = CGPoint(x: -view.frame.width, y: 0)
@@ -646,6 +640,40 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         cancelButton?.layer.insertSublayer(gradientLayer2, at: 0)
         
     }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+ 
+    }
+    @objc func keyboardWillHide(_ notification: Notification) {
+    }
+    
+    // NotificationCenterからのキーボード表示通知に伴う処理
+    @objc func keyboardWillShowNotification(_ notification: Notification) {
+        guard let textField = _activeTextField else {
+            return
+        }
+        let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        guard let keyboardHeight = rect?.size.height else {
+            return
+        }
+        let mainBoundsSize = UIScreen.main.bounds.size
+        let textFieldLimit = textField.frame.origin.y + textField.frame.height + 8.0
+        let keyboardLimit = mainBoundsSize.height - keyboardHeight
+        if keyboardLimit <= textFieldLimit {
+            let duration: TimeInterval? = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
+            UIView.animate(withDuration: duration!, animations: { () in
+                self.view.transform = CGAffineTransform(translationX: 0, y: -keyboardHeight)
+            })
+        }
+    }
+    // NotificationCenterからのキーボード非表示通知に伴う処理
+    @objc func keyboardWillHideNotification(_ notification: Notification) {
+        let duration: TimeInterval? = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double
+        UIView.animate(withDuration: duration!, animations: { () in
+            self.view.transform = CGAffineTransform.identity
+        })
+    }
+    
     func setView() {
         
         view.addSubview(tagListView)
@@ -676,7 +704,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         
         // テキストフィールドは適当にセット
         textField.delegate = self
-        textField.placeholder = "タグを入力してください"
         textField.returnKeyType = UIReturnKeyType.done
         
         // レイアウト調整
@@ -716,4 +743,6 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         
         textField.frame = CGRect(x: MARGIN, y: tagListView.frame.origin.y + tagListView.frame.height + 5, width: view.frame.width-MARGIN*2, height: 40)
     }
+    
+    
 }

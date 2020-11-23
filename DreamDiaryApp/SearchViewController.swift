@@ -1,6 +1,7 @@
 import UIKit
 import RealmSwift
 
+
 class SearchViewController: UIViewController,UISearchBarDelegate {
     
     
@@ -47,7 +48,47 @@ class SearchViewController: UIViewController,UISearchBarDelegate {
          animations:{ self.background2ImageView.frame.origin = endOrigin2 },
          completion: nil)
         
+        // 押せそうにみえる影
+        searchFeeling1Button.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFeeling1Button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFeeling1Button.layer.shadowOpacity = 0.9
+        searchFeeling1Button.layer.shadowRadius = 10
         
+        // 押せそうにみえる影
+        searchFeeling2Button.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFeeling2Button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFeeling2Button.layer.shadowOpacity = 0.9
+        searchFeeling2Button.layer.shadowRadius = 10
+        
+        // 押せそうにみえる影
+        searchFeeling3Button.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFeeling3Button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFeeling3Button.layer.shadowOpacity = 0.9
+        searchFeeling3Button.layer.shadowRadius = 10
+        
+        // 押せそうにみえる影
+        searchFeeling4Button.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFeeling4Button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFeeling4Button.layer.shadowOpacity = 0.9
+        searchFeeling4Button.layer.shadowRadius = 10
+        
+        // 押せそうにみえる影
+        searchFeeling5Button.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFeeling5Button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFeeling5Button.layer.shadowOpacity = 0.9
+        searchFeeling5Button.layer.shadowRadius = 10
+        
+        // 押せそうにみえる影
+        searchFeeling6Button.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFeeling6Button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFeeling6Button.layer.shadowOpacity = 0.9
+        searchFeeling6Button.layer.shadowRadius = 10
+        
+        // 押せそうにみえる影
+        searchFavButton.layer.shadowColor = UIColor.shadowColor.cgColor
+        searchFavButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        searchFavButton.layer.shadowOpacity = 0.9
+        searchFavButton.layer.shadowRadius = 10
     }
     
     // segueが動作することをViewControllerに通知するメソッド
