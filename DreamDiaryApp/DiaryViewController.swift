@@ -8,6 +8,7 @@ extension ViewController: UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
 }
 
 class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDelegate, UITextViewDelegate {
@@ -44,7 +45,7 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         custombar.backgroundColor = UIColor.groupTableViewBackground
         let commitBtn = UIButton(frame: CGRect(x:(UIScreen.main.bounds.size.width)-80,y:0,width:80,height:40))
         commitBtn.setTitle("閉じる", for: .normal)
-        commitBtn.setTitleColor(UIColor.white, for:.normal)
+        commitBtn.setTitleColor(UIColor.gray, for:.normal)
         commitBtn.addTarget(self, action:#selector(DiaryViewController.onClickCommitButton), for: .touchUpInside)
         commitBtn.addTarget(self, action:#selector(DiaryViewController.onClickCommitButton2), for: .touchUpInside)
         custombar.addSubview(commitBtn)
@@ -642,36 +643,47 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
- 
-    }
-    @objc func keyboardWillHide(_ notification: Notification) {
-    }
-    
-    // NotificationCenterからのキーボード表示通知に伴う処理
-    @objc func keyboardWillShowNotification(_ notification: Notification) {
         guard let textField = _activeTextField else {
             return
         }
-        let rect = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+        let rect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         guard let keyboardHeight = rect?.size.height else {
             return
         }
         let mainBoundsSize = UIScreen.main.bounds.size
         let textFieldLimit = textField.frame.origin.y + textField.frame.height + 8.0
         let keyboardLimit = mainBoundsSize.height - keyboardHeight
+        print("keyboardLimit=", keyboardLimit)
+        print("textFieldLimit=", textFieldLimit)
+        print("keyboardHeight=", keyboardHeight)
+        print("textField", textField)
         if keyboardLimit <= textFieldLimit {
             let duration: TimeInterval? = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
             UIView.animate(withDuration: duration!, animations: { () in
                 self.view.transform = CGAffineTransform(translationX: 0, y: -keyboardHeight)
             })
         }
+        
     }
-    // NotificationCenterからのキーボード非表示通知に伴う処理
-    @objc func keyboardWillHideNotification(_ notification: Notification) {
+    @objc func keyboardWillHide(_ notification: Notification) {
         let duration: TimeInterval? = notification.userInfo?[UIResponder.keyboardAnimationCurveUserInfoKey] as? Double
         UIView.animate(withDuration: duration!, animations: { () in
             self.view.transform = CGAffineTransform.identity
         })
+    }
+    
+    // NotificationCenterからのキーボード表示通知に伴う処理
+    @objc func keyboardWillShowNotification(_ notification: Notification) {
+        
+    }
+    // NotificationCenterからのキーボード非表示通知に伴う処理
+    @objc func keyboardWillHideNotification(_ notification: Notification) {
+        
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        _activeTextField = nil
+        return true
     }
     
     func setView() {

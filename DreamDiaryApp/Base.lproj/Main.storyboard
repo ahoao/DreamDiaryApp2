@@ -998,9 +998,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="4B6-xD-SSD">
-            <size key="intrinsicContentSize" width="354" height="16"/>
-        </designable>
         <designable name="Ey9-Af-CDU">
             <size key="intrinsicContentSize" width="374" height="16"/>
         </designable>
